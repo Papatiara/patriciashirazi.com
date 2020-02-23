@@ -17,7 +17,7 @@ const Math_text = (props) => {
 
     const backHome = () => {
         props.showMath(false)
-        props.history.push('/home')
+        props.history.push('/')
     }
     return (
         <article>

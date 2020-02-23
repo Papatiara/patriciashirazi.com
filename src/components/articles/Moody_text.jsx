@@ -17,7 +17,7 @@ const Moody_text = (props) => {
       
     const backHome = () => {
         props.showMoody(false)
-        props.history.push('/home')
+        props.history.push('/')
     }
     return (
         <article>

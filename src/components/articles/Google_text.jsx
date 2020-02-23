@@ -17,7 +17,7 @@ const Google_text = (props) => {
 
     const backHome = () => {
         props.showGoogle(false)
-        props.history.push('/home')
+        props.history.push('/')
     }
     return (
         <article>

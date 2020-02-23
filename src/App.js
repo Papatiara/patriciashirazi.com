@@ -99,7 +99,7 @@ function App() {
   } else {
     return (
       <Router>
-        <Route path="/home">
+        <Route path="/">
           <div>
             <Intro />
             <div>

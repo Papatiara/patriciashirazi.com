@@ -16,7 +16,7 @@ const Business_text = (props) => {
       
     const backHome = () => {
         props.showBusiness(false)
-        props.history.push('/home')
+        props.history.push('/')
     }
     return (
         <article>

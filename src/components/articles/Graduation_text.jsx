@@ -16,7 +16,7 @@ const Graduation_text = (props) => {
       
     const backHome = () => {
         props.showGraduation(false)
-        props.history.push('/home')
+        props.history.push('/')
     }
     return (
         <article>
