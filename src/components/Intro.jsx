@@ -1,68 +1,79 @@
 import React from 'react';
-import TextLoop from "react-text-loop";
-import ScrollIntoView from 'react-scroll-into-view'
 import { css } from 'emotion'
+
+import background from '../images/back.png'
+import phone from '../images/image.png'
+
 
 
 const Intro = () => {
     return (
         <div>
-            <div className={styles.intro}>
-                <h1 className={styles.hello}> Olá, </h1>
-                <h3 className={styles.me}> I am Patricia and this is my portfolio. Click or scroll to know a little more about me </h3>
-                < ScrollIntoView selector="#header">
-                    <button className={styles.button}> About me </button>
-                </ScrollIntoView>
-
+            <div className={styles.intro_holder}>    </div>
+            <div className={styles.back}>
+                <div className={styles.name}>
+                    <div> PATRICIA SHIRAZI <br></br>
+                        <div className={styles.st}>Full Stack Software Engineer</div>
+                    </div>
+                    <img className={styles.img} src={phone} />
+                </div>
             </div>
-            {/* <h2 className={styles.text}>
-                <TextLoop springConfig={{ stiffness: 70, damping: 31 }}
-                    adjustingSpeed={500} >
-                    <span> Software Engineering </span>
-                    <span> Mathematics </span>
-                    <span> Entrepreneurship </span>
-                    <span> User Experience </span>
-                </TextLoop>{" "}
-            </h2> */}
-            {/* </div> */}
         </div>
     )
 }
 
 const styles = {
-    intro: css`
+    back: css`
+    display: none;
+    @media (max-width: 1300px) {
+        display: flex;
+        justify-content: center;
+        color: #cb006d;
+        height: 100vh;
+        width: 100%;
+        background-color: #9ed0c9;   
+    }
+    `,
+    name: css`
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    // margin: auto;
+    margin-top: 15%;
+    height: 400px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif
+    // @media (max-width: 500px) {
+    // }	
+  
+        `,
+    st: css`
+    font-size: 14px;
+    color: brown;
+  
     `,
-    hello: css`
-    font-size: 67px;
-    color: black;
-    padding: 10px;
-    font-family: 'Libre Franklin', sans-serif;
-    `,
-    me: css`
-    font-size: 23px;
-    font-family: 'Libre Franklin', sans-serif;
-    `,
-    button: css` 
-    margin-top: 40%;
-    border-radius: 5px;
-    padding: 14px 28px;
-    cursor: pointer;
-    &:hover {
-    color: white;
-    background-color: black;
-    transition: 1s;
-     border-color:#DDDDDD;
-    }&:focus {
-        outline: none;
-         background-color: black;
-        color: white;
 
+    img: css`
+    width: auto;
+    height: auto;
+    @media (max-width: 500px) {
+        width: 200px;
+        margin-left: 2%;
+    }
+    `,
+    intro_holder: css`
+    display: none;
+    @media (min-width: 1300px) {
+       display:block;
+       height: 100vh;
+       background-image: url(${background});
+       background-color: #9ed0c9;
+       background-repeat: no-repeat;
+       width: 100%;
     }
     `,
 }

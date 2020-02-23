@@ -7,6 +7,8 @@ import Automation from './carousel/Automation';
 import Google from './carousel/Google';
 import Math from './carousel/Math';
 import Moody from './carousel/Moody';
+import Voluntering from './carousel/Voluntering';
+
 
 
 
@@ -15,38 +17,45 @@ const Carousel = (props) => {
     if (props.matter === "Math") {
         return (
             <div className={styles.grid_selected}>
-                < Graduation />
-                < Math />
+                < Math showMath={props.showMath}/>
             </div>
         )
     } if (props.matter === "Google") {
         return (
             <div className={styles.grid_selected}>
-                < Google />
-                < Automation />
+                < Google showGoogle={props.showGoogle}/>
             </div>
         )
     } if (props.matter === "Engineering") {
         return (
             <div className={styles.grid_selected}>
-                < Automation />
-                < Moody />
+                < Graduation showGraduation={props.showGraduation}/>
+                < Automation showAutomation={props.showAutomation} />
+                < Moody showMoody={props.showMoody}/>
             </div>
         )
     } if (props.matter === "Entrepreneurship") {
         return (
             <div className={styles.grid_selected}>
-                < Business />
+                < Business showSubject={props.showSubject} />
             </div>
         )
-    } return (
+    } if (props.matter === "Voluntering") {
+        return (
+            <div className={styles.grid_selected}>
+            < Voluntering showVoluntering={props.showVoluntering}/>
+            </div>
+        )
+    }
+    return (
         <div className={styles.grid}>
-            < Moody />
-            < Business />
-            < Automation />
-            < Graduation />
-            < Google />
-            < Math />
+            < Google showGoogle={props.showGoogle}/>
+            < Graduation showGraduation={props.showGraduation}/>
+            < Moody showMoody={props.showMoody}/>
+            < Business showSubject={props.showSubject} />
+            < Automation showAutomation={props.showAutomation} />
+            < Voluntering showVoluntering={props.showVoluntering}/>
+            < Math showMath={props.showMath}/>
         </div>
     )
 
@@ -55,39 +64,43 @@ const Carousel = (props) => {
 const styles = {
     grid: css`
     display: flex;
-    justify-content:space-between;
+    font-family: 'Zilla Slab', serif;
+    flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
-    width: 850px;
-    height: 550px;
-    margin-top: 2%;
-    margin-left: 23.5%;
-    @media (max-width: 800px) {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    overflow-y: hidden;
+    @media (max-width: 1024px) {
         display: flex;
+        justify-content: space-between;
+        flex-direction: row;
         flex-wrap: wrap;
-        height: 1500px;
-        width: 250px;
-        align-items: center;
-        justify-content: space-around;
+        height: auto;
+        width: 90%;
+        margin-top: 2%;
+        margin-right: 5%;
+        margin-left: 5%;
     }
     `,
     grid_selected: css`
     display: flex;
-    justify-content:space-between;
-    width: 550px;
-    height: 500px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
     margin-top: 2%;
-    margin-left: 35%;
-    margin-top: 25px;
-    font-size: 21px;
-    text-align: center;
-    @media (max-width: 800px) {
+    margin-right: 5%;
+    margin-left: 15%;
+    padding-left: 2%;
+    cursor: pointer;
+    @media (max-width: 1024px) {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
-        height: 550px;
-        transition: height 2s;
-        width: 250px;
-        align-items: center;
-        justify-content: space-around;
+        width: 90%;
+        margin: auto;
+        cursor: pointer;
     }
     `
 }

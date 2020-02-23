@@ -5,43 +5,44 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faFile } from '@fortawesome/free-solid-svg-icons'
 
 
-
-
 import { css } from 'emotion'
 
 
-
-import linkedin from "../images/linkedin.png"
-import git from "../images/git.png"
-
 const Header = () => {
-    return (<div id="header" className={styles.header}>
-        <FontAwesomeIcon className={styles.git} icon={faGithub} />
-        <FontAwesomeIcon className={styles.git} icon={faLinkedin} />
-        <FontAwesomeIcon className={styles.git} icon={faFile} />
+
+    return (<div id="header" className={styles.head}>
+        <a className={styles.icons} href="https://github.com/Papatiara"><FontAwesomeIcon icon={faGithub} /></a>
+        <a className={styles.icons} href="https://www.linkedin.com/in/patriciashirazi/"><FontAwesomeIcon icon={faLinkedin} /> </a>
+        <a className={styles.icons} href="https://docs.google.com/document/d/1P0EkLsdc8pjncGLzY5CRrDi8DnIW1Av8RvUSqYHuQNw/edit"><FontAwesomeIcon icon={faFile} /> </a>
     </div>
 
     )
 }
 
 const styles = {
-    header: css`
-        margin-top: 70%;
-        background-color: black;
+    head: css`
+    margin-top:0%;
+    background-color: black;
         display: flex;
         justify-content: space-around;
         width: 100%;
-        height: 130px;
-        @media (max-width: 1400px) {
-            margin-top: 160%;
-
+        height: 100%;
+        @media (max-width: 1000px) {
+            margin-top:0%;
+           
+        },
+        @media (width: 768px) {
+            margin-top:0%;
+           width: 768px;
         },
     `,
-    git: css`
+    icons: css`
     color: white;
-    margin-top: 2%;
     cursor: pointer;
-    font-size: 86px
+    font-size: 86px;
+    &:hover {
+        color: #708090;
+    }
     `
 }
 
