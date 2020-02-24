@@ -4,9 +4,9 @@ import { MDBView, MDBMask } from "mdbreact";
 
 import coding from '../../images/coding.png'
 
-const Automation = () => {
+const Automation = (props) => {
     return (
-        <div className={styles.projects}>
+        <div className={styles.projects} onClick={() => props.showAutomation(true)}>
             <MDBView hover zoom>
                 <img
                     className={styles.image}

@@ -19,7 +19,7 @@ const Graduation = (props) => {
                     />
                     <MDBMask className={styles.classname} >
                         <div className={styles.summary}>
-                            <p>A summary of my journy in HackReactor</p>
+                            <p>A summary of my journey in HackReactor</p>
                         </div>
                     </MDBMask>
                 </MDBView>

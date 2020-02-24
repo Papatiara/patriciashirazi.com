@@ -8,7 +8,7 @@ import selenium from '../../images/moody.png'
 const Moody = (props) => {
     return (
         <Link to="/moody">
-            <div className={styles.projects} onClick={() => { props.showMoody(true) }}>
+            <div className={styles.projects} >
                 <MDBView hover zoom>
                     <img
                         className={styles.image}
@@ -17,7 +17,7 @@ const Moody = (props) => {
                     />
                     <MDBMask className={styles.classname} >
                         <div className={styles.summary}>
-                            <p> Moody - NLP sentiment analysis - A WebApp I built using React</p>
+                            <p onClick={() => { props.showMoody(true) }}> Moody - NLP sentiment analysis - A WebApp I built using React</p>
                         </div>
                     </MDBMask>
                 </MDBView>
@@ -43,17 +43,15 @@ const styles = {
     projects: css`
         height: 350px;
         width: 320px;
-        cursor: pointer;
         margin-top: 10%;
         `,
     image: css`
-    animation: ${fadeInImage} 0.3s ease-out;
+        animation: ${fadeInImage} 0.3s ease-out;
         `,
     classname: css`
         color: white;
         font-size: 1.5em;
         font-weight: bold;
-        cursor: pointer;
         text-align: center;
     `,
     summary: css`
@@ -62,6 +60,7 @@ const styles = {
         height: auto;
         background-color: #008080;
         font-size: 20px;
+        cursor: pointer;
         `
 }
 

@@ -18,7 +18,7 @@ const Math = (props) => {
                     />
                     <MDBMask className={styles.classname}>
                         <div className={styles.summary}>
-                            <p>Helping underpriviledge young students to get their first job</p>
+                            <p>Helping underpriviledged young students to get their first job</p>
                         </div>
                     </MDBMask>
                 </MDBView>

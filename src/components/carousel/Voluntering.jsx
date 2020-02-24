@@ -16,7 +16,7 @@ const Voluntering = () => {
                     />
                     <MDBMask className={styles.classname} >
                         <div className={styles.summary}>
-                            <p> Technical Volunter at <a href="https://codenation.org/" style={{color: "white", textDecoration: "underline", cursor: "pointer"}}>Code Nation</a> </p>
+                            <p> Technical Volunteer at <a href="https://codenation.org/" style={{color: "white", textDecoration: "underline", cursor: "pointer"}}>Code Nation</a> </p>
                         </div>
                     </MDBMask>
                 </MDBView>
@@ -54,7 +54,7 @@ const styles = {
         text-align: center;
     `,
     summary: css`
-        margin-top: 91%;
+        margin-top: 89%;
         width: auto;
         height: auto;
         background-color: #008080;

@@ -19,7 +19,7 @@ const Business = (props) => {
                     />
                     <MDBMask className={styles.classname}>
                         <div className={styles.summary}>
-                            <p>How I started my own company by learning myself how to fix iPhones</p>
+                            <p>I started my own company by learning myself how to fix iPhones</p>
                         </div>                    
                     </MDBMask>
                 </MDBView>
