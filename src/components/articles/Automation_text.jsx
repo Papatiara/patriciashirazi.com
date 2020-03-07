@@ -37,7 +37,6 @@ const Automation_text = (props) => {
                     <p>Every single feature you see here, from animations to the background design, was made by me. I didn’t use any template or copied and pasted from the internet, not that I don't think it is valid. At the end of the day, we all want to deliver great work, don't overpass our deadlines, and I believe there is no reason to redo a work that is available online.
 Because I wanted to take my time and revisit some skills, such as React Hooks, I decided to build this WebApp from scratch.</p>
                 </section>
-                <img className={styles.image} src={rir} />
                 <section>
                     <h2>Technologies I used:</h2>
                     <ul>
