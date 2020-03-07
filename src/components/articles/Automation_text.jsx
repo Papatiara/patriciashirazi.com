@@ -1,18 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Article_Header from './Article_Header';
 import { withRouter } from "react-router-dom";
 import { css } from 'emotion'
 
 import rir from "../../images/rir.png";
 
+
+
+
 const title = "PATRICIASHIRAZI.COM";
 const description = "Building my portfolio from scratch using my favorite JavaScript framework"
 
 const Automation_text = (props) => {
+
+
     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
-      
+        if (props.history.action === "PUSH") {
+            window.scrollTo(0, 0)
+        } else {
+            props.showAutomation(false)
+            props.history.push('/');
+        }
+    })
+
+
     const backHome = () => {
         props.showAutomation(false)
         props.history.push('/')
@@ -23,23 +34,27 @@ const Automation_text = (props) => {
             <p className={styles.backHome} onClick={() => backHome()}>Patricia's Portfolio</p>
             <div className={styles.body}>
                 <section>
-                    <p>Every single feature you see here, from animations to the background design, was made by me. I didn’t use any template or copied and pasted from the internet, not that I don't think it is totally valid to do so. At the end of the day we all want to deliver great work, don't overcome our deadlines, and I think we all agree there is no reason to redo a work that somebody else already did?! 
-Because I didn't have a tight deadline and I wanted to take my time and revisit some skills to build it from scratch.</p>
+                    <p>Every single feature you see here, from animations to the background design, was made by me. I didn’t use any template or copied and pasted from the internet, not that I don't think it is valid. At the end of the day, we all want to deliver great work, don't overpass our deadlines, and I believe there is no reason to redo a work that is available online.
+Because I wanted to take my time and revisit some skills, such as React Hooks, I decided to build this WebApp from scratch.</p>
                 </section>
                 <img className={styles.image} src={rir} />
                 <section>
                     <h2>Technologies I used:</h2>
                     <ul>
-                        <li>React</li>
+                        <li>React-Hooks</li>
                         <li>React-Router</li>
                         <li>Emotions</li>
-                    </ul>               
+                        <li>HTML5</li>
+                        <li>Heroku</li>
+                    </ul>
                 </section>
                 <section>
                     <h2>Challenges</h2>
+                    <p>My biggest challenge for this project definitely made it responsive. I am happy with the mobile version, but I think it can look a lot better, and I will keep working towards that. </p>
                 </section>
                 <section>
                     <h2>What I learned</h2>
+                    <p>It wasn't the first time I used Hooks or Router, but this experience helped me to understand better concepts from Hooks, such as UseEffect and History on Router</p>
                 </section>
             </div>
         </article>

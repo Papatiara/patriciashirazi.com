@@ -42,7 +42,7 @@ const styles = {
         height: 350px;
         width: 320px;
         cursor: pointer;
-        margin-top: 3%;
+        margin-top: 9%;
         `,
     image: css`
     animation: ${fadeInImage} 0.3s ease-out;
@@ -54,12 +54,19 @@ const styles = {
         text-align: center;
     `,
     summary: css`
-        margin-top: 89%;
+        margin-top: 91%;
         width: auto;
         height: auto;
         background-color: #008080;
         font-size: 20px;
-        `
+        color: white;
+        @media (max-width: 320px) {
+            margin-top: 86%;
+            width: 295px;
+            height: 50px;
+            font-size: 14px;
+            margin-left: 0%;
+        }`
 }
 
 export default Voluntering;

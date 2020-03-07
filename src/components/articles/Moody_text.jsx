@@ -11,9 +11,15 @@ const title = "Moody - NLP sentiment analysis";
 const description = "An overview of how I used a third party API to create a WebApp to analyze sentiments on any user input.";
 
 const Moody_text = (props) => {
+ 
     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+        if (props.history.action === "PUSH") {
+            window.scrollTo(0, 0)
+        } else {
+            props.showMoody(false)
+            props.history.push('/');
+        }
+    })
       
     const backHome = () => {
         props.showMoody(false)

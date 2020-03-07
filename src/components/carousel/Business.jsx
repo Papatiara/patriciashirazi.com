@@ -9,22 +9,22 @@ import business from '../../images/business.jpg'
 
 const Business = (props) => {
     return (
-        <Link to="business">
-            <div className={styles.business} onClick={() => props.showSubject(true)}>
-                <MDBView hover zoom>
-                    <img
-                        className={styles.image}
-                        src={business}
-                        alt=""
-                    />
-                    <MDBMask className={styles.classname}>
+        <div className={styles.business}>
+            <MDBView hover zoom>
+                <img
+                    className={styles.image}
+                    src={business}
+                    alt=""
+                />
+                <MDBMask className={styles.classname}>
+                    <Link to="business">
                         <div className={styles.summary}>
-                            <p>I started my own company by learning myself how to fix iPhones</p>
-                        </div>                    
-                    </MDBMask>
-                </MDBView>
-            </div>
-        </Link>
+                            <p onClick={() => props.showSubject(true)}>I started my own company by teaching myself how to fix iPhones</p>
+                        </div>
+                    </Link>
+                </MDBMask>
+            </MDBView>
+        </div>
     )
 }
 
@@ -44,8 +44,7 @@ const styles = {
     business: css`
     height: 350px;
     width: 320px;
-    cursor: pointer;
-    margin-top: 10%;
+    margin-top: 9%;
   `,
     image: css`
     animation: ${fadeInImage} 0.3s ease-out;
@@ -54,7 +53,6 @@ const styles = {
     color: white;
     font-size: 1.5em;
     font-weight: bold;
-    cursor: pointer;
     text-align: center;
     `,
     summary: css`
@@ -63,7 +61,15 @@ const styles = {
     height: auto;
     background-color: #008080;
     font-size: 20px;
-    `
+    cursor: pointer;
+    color: white;
+    @media (max-width: 320px) {
+        margin-top: 86%;
+        width: 295px;
+        height: 50px;
+        font-size: 14px;
+        margin-left: 0%;
+    }`
 }
 
 export default Business;

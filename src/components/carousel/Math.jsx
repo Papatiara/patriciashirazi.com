@@ -8,22 +8,22 @@ import math from '../../images/teacherciee.jpg'
 
 const Math = (props) => {
     return (
-        <Link to="/aprendizlegal">
-            <div className={styles.math} onClick={() => { props.showMath(true) }}>
-                <MDBView hover zoom>
-                    <img
-                        className={styles.image}
-                        src={math}
-                        alt=""
-                    />
-                    <MDBMask className={styles.classname}>
+        <div className={styles.math}>
+            <MDBView hover zoom>
+                <img
+                    className={styles.image}
+                    src={math}
+                    alt=""
+                />
+                <MDBMask className={styles.classname}>
+                    <Link to="/aprendizlegal">
                         <div className={styles.summary}>
-                            <p>Helping underpriviledged young students to get their first job</p>
+                            <p onClick={() => { props.showMath(true) }}>Helping underpriviledged young students to get their first jobs</p>
                         </div>
-                    </MDBMask>
-                </MDBView>
-            </div>
-        </Link>
+                    </Link>
+                </MDBMask>
+            </MDBView>
+        </div>
     )
 }
 
@@ -44,7 +44,6 @@ const styles = {
     math: css`
     height: 350px;
     width: 320px;
-    cursor: pointer;
     margin-top: 3%;
     `,
     image: css`
@@ -55,7 +54,6 @@ const styles = {
     color: white;
     font-size: 1.5em;
     font-weight: bold;
-    cursor: pointer;
     text-align: center;
     `,
     summary: css`
@@ -64,6 +62,14 @@ const styles = {
     height: auto;
     background-color: #008080;
     font-size: 20px;
-    `
+    color: white;
+    cursor: pointer;
+    @media (max-width: 320px) {
+        margin-top: 86%;
+        width: 295px;
+        height: 50px;
+        font-size: 14px;
+        margin-left: 0%;
+    }`
 }
 export default Math;

@@ -54,11 +54,11 @@ const styles = {
     secondBackground: css`
     display: none;
     @media (max-width: 1300px) {
+        overflow: hidden;
         display: flex;
         height: 100vh;
         width: 100%;
         background-color: #9ed0c9;
-        // background-color: black;  
     `,
     img: css`
     width: 50vw;
@@ -68,22 +68,15 @@ const styles = {
         height:100vh;
     }`,
     partOne: css`
-    // background-color: black;  
-
-    // position: relative;
-    // margin-top: 0%;
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    // margin-left: -10%;
     justify-content: space-between;
     overflow-x: hidden;
     `,
     bottom: css`
-    // width: 10%;
     height: 100px;
-    // background-color: black;
     margin-top: 95vh;
     display: flex;
     flex-direction: row;

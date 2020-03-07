@@ -11,9 +11,15 @@ const description = "A little of my experience working to improve Google Search 
 
 
 const Google_text = (props) => {
+   
     useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+        if (props.history.action === "PUSH") {
+            window.scrollTo(0, 0)
+        } else {
+            props.showGoogle(false)
+            props.history.push('/');
+        }
+    })
 
     const backHome = () => {
         props.showGoogle(false)

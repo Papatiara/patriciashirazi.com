@@ -8,23 +8,23 @@ import hr from '../../images/hr.jpg'
 
 const Graduation = (props) => {
     return (
-        <Link to="/hackreactor">
-            <div className={styles.graduation} onClick={() => { props.showGraduation(true) }}>
-                <MDBView hover zoom>
-                    <img
-                        id={"graduation"}
-                        className={styles.image}
-                        src={hr}
-                        alt=""
-                    />
-                    <MDBMask className={styles.classname} >
+        <div className={styles.graduation} >
+            <MDBView hover zoom>
+                <img
+                    id={"graduation"}
+                    className={styles.image}
+                    src={hr}
+                    alt=""
+                />
+                <MDBMask className={styles.classname} >
+                    <Link to="/hackreactor">
                         <div className={styles.summary}>
-                            <p>A summary of my journey in HackReactor</p>
+                            <p onClick={() => { props.showGraduation(true) }}>A summary of my journey in HackReactor</p>
                         </div>
-                    </MDBMask>
-                </MDBView>
-            </div>
-        </Link>
+                    </Link>
+                </MDBMask>
+            </MDBView>
+        </div>
     )
 
 }
@@ -51,7 +51,6 @@ const styles = {
     graduation: css`
     height: 320px;
     width: 320px;
-    cursor: pointer;
     margin-top: 10%;
     `,
     image: css`
@@ -61,15 +60,22 @@ const styles = {
     color: white;
     font-size: 1.5em;
     font-weight: bold;
-    cursor: pointer;
     text-align: center;
     `,
     summary: css`
     margin-top: 82%;
     width: auto;
     height: auto;
+    color: white;
     background-color: #008080;
     font-size: 20px;
-    `
+    cursor: pointer;
+    @media (max-width: 320px) {
+        margin-top: 86%;
+        width: 295px;
+        height: 50px;
+        font-size: 14px;
+        margin-left: 0%;
+    }`
 }
 export default Graduation;

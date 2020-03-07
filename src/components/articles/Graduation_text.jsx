@@ -10,9 +10,15 @@ const title = 'From "Hello World" to full stack applications';
 const description = "How I transit from my life as a Math teacher to a full-stack Software Engineer.";
 
 const Graduation_text = (props) => {
+    
     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+        if (props.history.action === "PUSH") {
+            window.scrollTo(0, 0)
+        } else {
+            props.showGraduation(false)
+            props.history.push('/');
+        }
+    })
       
     const backHome = () => {
         props.showGraduation(false)

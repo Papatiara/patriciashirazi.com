@@ -8,22 +8,23 @@ import google from '../../images/google.png';
 
 const Google = (props) => {
     return (
-        <Link to="/google">
-            <div className={styles.google} onClick={() => props.showGoogle(true)}>
-                <MDBView hover zoom>
-                    <img
-                        className={styles.image}
-                        src={google}
-                        alt=""
-                    />
-                    <MDBMask className={styles.classname}>
+        <div className={styles.google}>
+            <MDBView hover zoom>
+                <img
+                    className={styles.image}
+                    src={google}
+                    alt=""
+                />
+                <MDBMask className={styles.classname}>
+                    <Link to="/google">
                         <div className={styles.summary}>
-                            <p>How I helped to improve Google Search in Brazil</p>
+                            <p onClick={() => props.showGoogle(true)}>How I helped to improve Google Search in Brazil</p>
                         </div>
-                    </MDBMask>
-                </MDBView>
-            </div>
-        </Link>
+                    </Link>
+
+                </MDBMask>
+            </MDBView>
+        </div>
     )
 }
 
@@ -44,7 +45,6 @@ const styles = {
     google: css`
     height: 350px;
     width: 320px;
-    cursor: pointer;
     margin-top: 10%;
     `,
     image: css`
@@ -54,16 +54,23 @@ const styles = {
     color: white;
     font-size: 1.5em;
     font-weight: bold;
-    cursor: pointer;
     text-align: center;
     `,
     summary: css`
     margin-top: 82%;
     width: auto;
     height: auto;
+    color: white;
     background-color: #008080;
     font-size: 20px;
-    `
+    cursor: pointer;
+    @media (max-width: 320px) {
+        margin-top: 86%;
+        width: 290px;
+        height: 50px;
+        font-size: 14px;
+        margin-left: 0%;
+    }`
 }
 
 export default Google;

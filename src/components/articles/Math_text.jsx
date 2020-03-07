@@ -11,9 +11,15 @@ const description = "My trajectory of helping more than five hundred students in
 
 
 const Math_text = (props) => {
+  
     useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+        if (props.history.action === "PUSH") {
+            window.scrollTo(0, 0)
+        } else {
+            props.showMath(false)
+            props.history.push('/');
+        }
+    })
 
     const backHome = () => {
         props.showMath(false)

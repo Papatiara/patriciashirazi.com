@@ -10,10 +10,16 @@ const title = "Rio Phone Repair";
 const description = "How I become a Co-founder and Operation manager of business from learning myself how to fix iPhones"
 
 const Business_text = (props) => {
+ 
     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
-      
+        if (props.history.action === "PUSH") {
+            window.scrollTo(0, 0)
+        } else {
+            props.showBusiness(false)
+            props.history.push('/');
+        }
+    })
+
     const backHome = () => {
         props.showBusiness(false)
         props.history.push('/')

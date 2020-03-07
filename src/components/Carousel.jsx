@@ -29,9 +29,10 @@ const Carousel = (props) => {
     } if (props.matter === "Engineering") {
         return (
             <div className={styles.grid_selected}>
+                < Google showGoogle={props.showGoogle}/>
                 < Graduation showGraduation={props.showGraduation}/>
-                < Automation showAutomation={props.showAutomation} />
                 < Moody showMoody={props.showMoody}/>
+                < Automation showAutomation={props.showAutomation}/>
             </div>
         )
     } if (props.matter === "Entrepreneurship") {
@@ -88,18 +89,21 @@ const styles = {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 70%;
+    width: 75%;
     margin-top: 2%;
-    margin-right: 5%;
-    margin-left: 15%;
+    margin-right: 2%;
+    margin-left: 5%;
     padding-left: 2%;
     cursor: pointer;
     @media (max-width: 1024px) {
+        margin-right: 5%;
+        margin-left: 5%;
+        padding-left: 2%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         width: 90%;
-        margin: auto;
+        // margin: auto;
         cursor: pointer;
     }
     `

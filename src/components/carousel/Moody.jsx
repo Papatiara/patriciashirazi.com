@@ -7,22 +7,22 @@ import selenium from '../../images/moody.png'
 
 const Moody = (props) => {
     return (
-        <Link to="/moody">
-            <div className={styles.projects} >
-                <MDBView hover zoom>
-                    <img
-                        className={styles.image}
-                        src={selenium}
-                        alt=""
-                    />
-                    <MDBMask className={styles.classname} >
+        <div className={styles.projects} >
+            <MDBView hover zoom>
+                <img
+                    className={styles.image}
+                    src={selenium}
+                    alt=""
+                />
+                <MDBMask className={styles.classname} >
+                    <Link to="/moody">
                         <div className={styles.summary}>
                             <p onClick={() => { props.showMoody(true) }}> Moody - NLP sentiment analysis - A WebApp I built using React</p>
                         </div>
-                    </MDBMask>
-                </MDBView>
-            </div>
-        </Link >
+                    </Link >
+                </MDBMask>
+            </MDBView>
+        </div>
     )
 }
 
@@ -61,7 +61,14 @@ const styles = {
         background-color: #008080;
         font-size: 20px;
         cursor: pointer;
-        `
+        color: white;
+        @media (max-width: 320px) {
+            margin-top: 86%;
+            width: 295px;
+            height: 50px;
+            font-size: 14px;
+            margin-left: 0%;
+        }`
 }
 
 export default Moody;

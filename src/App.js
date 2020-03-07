@@ -144,7 +144,7 @@ const styles = {
     font-size: 17px;
     outline: 0;
     top: 80%;
-    left: 45%;
+    left: 35%;
     border-radius: 5px;
     padding: 14px 28px;
     cursor: pointer;
