@@ -17,7 +17,7 @@ const Automation = (props) => {
                 <MDBMask className={styles.classname}>
                     <Link to="/portfolio">
                         <div className={styles.summary}>
-                            <p onClick={() => props.showAutomation(true)}> Building this portfolio from scratch using React Hooks </p>
+                            <p onClick={() => props.showAutomation(true)}> Building this portfolio from scratch using React Hooks... (Read More) </p>
                         </div>
                     </Link>
                 </MDBMask>

@@ -18,7 +18,7 @@ const Math = (props) => {
                 <MDBMask className={styles.classname}>
                     <Link to="/aprendizlegal">
                         <div className={styles.summary}>
-                            <p onClick={() => { props.showMath(true) }}>Helping underpriviledged young students to get their first jobs</p>
+                            <p onClick={() => { props.showMath(true) }}>Helping underpriviledged young students to get their first jobs... (Read More)</p>
                         </div>
                     </Link>
                 </MDBMask>

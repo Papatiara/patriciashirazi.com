@@ -91,8 +91,8 @@ const styles = {
     flex-wrap: wrap;
     width: 75%;
     margin-top: 2%;
-    margin-right: 2%;
-    margin-left: 5%;
+    margin-right: 12%;
+    margin-left: 15%;
     padding-left: 2%;
     cursor: pointer;
     @media (max-width: 1024px) {
@@ -103,7 +103,6 @@ const styles = {
         justify-content: space-between;
         flex-wrap: wrap;
         width: 90%;
-        // margin: auto;
         cursor: pointer;
     }
     `

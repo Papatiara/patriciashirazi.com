@@ -18,7 +18,7 @@ const Google = (props) => {
                 <MDBMask className={styles.classname}>
                     <Link to="/google">
                         <div className={styles.summary}>
-                            <p onClick={() => props.showGoogle(true)}>How I helped to improve Google Search in Brazil</p>
+                            <p onClick={() => props.showGoogle(true)}>How I helped to improve Google Search in Brazil... (Read More)</p>
                         </div>
                     </Link>
 

@@ -61,30 +61,10 @@ Because I wanted to take my time and revisit some skills, such as React Hooks, I
 }
 
 const styles = {
-    title_holder: css` 
-        width: 100%;
-        height: 180px;
-        background-color: black;
-        color: white;
-        `,
-    title: css`
-        padding-top: 25px;
-        padding-left: 48px;
-        font-family: 'Raleway',sans-serif;
-        font-weight: 800;
-        font-size: 5.9vw;
-        `,
-    description: css`
-        padding-left: 48px;
-        font-family:  Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Fira Sans,Helvetica Neue,Arial,sans-serif;
-        font-weight: 600;
-        font-size: 5.9vw;
-        `,
     body: css`
-     text-indent: 5%;
-     margin: 12px 12px 12px 12px;
-     text-align: justify;
-
+        padding-top: 25px;
+        width: 90%;
+        margin: auto;
     `,
     backHome: css`
     margin-top: 15px;

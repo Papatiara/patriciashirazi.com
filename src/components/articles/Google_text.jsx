@@ -50,8 +50,8 @@ const Google_text = (props) => {
                     </ul>
                 </section>
                 <section>
-                    <h2>Working at GooglePlex and the take-outs of my experience</h2>
-                    <p> Using cutting edge technologies with the most talented engineers that a company like Google can have, was just the most amazing work experience of my career so far. </p>
+                    <h2>Working at GooglePlex and the highlights of my experience</h2>
+                    <p> Using cutting edge technologies with the most talented engineers that a company like Google can have, was the most amazing work experience of my career so far. </p>
                     <p> I was able to put on practice many of the skills I learned at HR, such as A/B testing, process automation, and JavaScript, as well as, learn new ones, for example, Selenium and Python.</p>
                     <p> Not to mention all the perks GooglePlex can offer! Even as a contractor, I had all the benefits of a Google Employee, it was fun working in such a fun and incredible office! </p>
                 </section>
@@ -62,27 +62,10 @@ const Google_text = (props) => {
 
 
 const styles = {
-    title_holder: css` 
-        width: 100%;
-        height: 180px;
-        background-color: black;
-        color: white;
-        `,
-    title: css`
-        padding-top: 25px;
-        padding-left: 48px;
-        font-weight: 800;
-        font-size: 35px;
-        `,
-    description: css`
-        padding-left: 48px;
-        font-weight: 600;
-        font-size: 15px;
-    `,
     body: css`
         padding-top: 25px;
-        padding-left: 48px;
-        font-family: 'Zilla Slab', serif;
+        width: 90%;
+        margin: auto;
     `,
     backHome: css`
         margin-top: 15px;

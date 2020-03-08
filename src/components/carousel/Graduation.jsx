@@ -19,7 +19,7 @@ const Graduation = (props) => {
                 <MDBMask className={styles.classname} >
                     <Link to="/hackreactor">
                         <div className={styles.summary}>
-                            <p onClick={() => { props.showGraduation(true) }}>A summary of my journey in HackReactor</p>
+                            <p onClick={() => { props.showGraduation(true) }}>A summary of my journey in HackReactor... (Read More)</p>
                         </div>
                     </Link>
                 </MDBMask>
@@ -75,6 +75,7 @@ const styles = {
         width: 295px;
         height: 50px;
         font-size: 14px;
+        cursor: pointer;
         margin-left: 0%;
     }`
 }

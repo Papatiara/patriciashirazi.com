@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { css } from 'emotion'
 
 import { withRouter } from "react-router-dom";
@@ -11,7 +11,7 @@ const title = "Moody - NLP sentiment analysis";
 const description = "An overview of how I used a third party API to create a WebApp to analyze sentiments on any user input.";
 
 const Moody_text = (props) => {
- 
+
     useEffect(() => {
         if (props.history.action === "PUSH") {
             window.scrollTo(0, 0)
@@ -20,7 +20,7 @@ const Moody_text = (props) => {
             props.history.push('/');
         }
     })
-      
+
     const backHome = () => {
         props.showMoody(false)
         props.history.push('/')
@@ -63,29 +63,10 @@ const Moody_text = (props) => {
 }
 
 const styles = {
-    title_holder: css` 
-        width: 100%;
-        height: 180px;
-        background-color: black;
-        color: white;
-        `,
-    title: css`
-        padding-top: 25px;
-        padding-left: 48px;
-        font-family: 'Raleway',sans-serif;
-        font-weight: 800;
-        font-size: 35px;
-        `,
-    description: css`
-        padding-left: 48px;
-        font-family:  Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Fira Sans,Helvetica Neue,Arial,sans-serif;
-        font-weight: 600;
-        font-size: 15px;
-    `,
     body: css`
         padding-top: 25px;
-        padding-left: 48px;
-        font-family: 'Zilla Slab', serif;
+        width: 90%;
+        margin: auto;
     `,
     backHome: css`
         margin-top: 15px;

@@ -19,7 +19,7 @@ const Business = (props) => {
                 <MDBMask className={styles.classname}>
                     <Link to="business">
                         <div className={styles.summary}>
-                            <p onClick={() => props.showSubject(true)}>I started my own company by teaching myself how to fix iPhones</p>
+                            <p onClick={() => props.showSubject(true)}>I started my own company by teaching myself how to fix iPhones... (Read More)</p>
                         </div>
                     </Link>
                 </MDBMask>
@@ -56,7 +56,7 @@ const styles = {
     text-align: center;
     `,
     summary: css`
-    margin-top: 82%;
+    margin-top: 73%;
     width: auto;
     height: auto;
     background-color: #008080;

@@ -54,7 +54,7 @@ const styles = {
         text-align: center;
     `,
     summary: css`
-        margin-top: 91%;
+        margin-top: 89%;
         width: auto;
         height: auto;
         background-color: #008080;

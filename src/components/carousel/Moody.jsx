@@ -17,7 +17,7 @@ const Moody = (props) => {
                 <MDBMask className={styles.classname} >
                     <Link to="/moody">
                         <div className={styles.summary}>
-                            <p onClick={() => { props.showMoody(true) }}> Moody - NLP sentiment analysis - A WebApp I built using React</p>
+                            <p onClick={() => { props.showMoody(true) }}> Moody - A Web App I built using React... (Read More)</p>
                         </div>
                     </Link >
                 </MDBMask>
