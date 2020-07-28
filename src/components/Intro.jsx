@@ -13,6 +13,11 @@ import partThree from '../images/partThree.png'
 
 const Intro = () => {
     return (
+        // <div className={styles.background}>
+        //     <div className={styles.name}> PATRICIA SHIRAZI <br></br> 
+        //     <div className={styles.sub}>FULL STACK SOFTWARE ENGINEER</div>
+        //     </div>
+        // </div>
         <div>
             <div className={styles.intro1_holder}>    </div>
             <div className={styles.secondBackground}>
@@ -40,6 +45,25 @@ const Intro = () => {
 }
 
 const styles = {
+    background: css`
+        height: 100vh;
+        // width: 90%;
+        border: 10px inset #b4409e;
+    // border-style: outset;
+    // border-color: #b853a5;
+        margin: 15px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    `,
+    name: css `
+        font-size: 64px;
+        font-family: 'Montserrat Subrayada', sans-serif;
+    `,
+    sub: css`
+        font-size: 24px;
+        font-family: 'Poiret One', sans-serif;
+        `,
     intro2_holder: css`
     height: 50vh;
     width: 100%;

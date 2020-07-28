@@ -13,7 +13,7 @@ const Header = () => {
     return (<div id="header" className={styles.head}>
         <a className={styles.icons} href="https://github.com/Papatiara"><FontAwesomeIcon icon={faGithub} /></a>
         <a className={styles.icons} href="https://www.linkedin.com/in/patriciashirazi/"><FontAwesomeIcon icon={faLinkedin} /> </a>
-        <a className={styles.icons} href="https://docs.google.com/document/d/1P0EkLsdc8pjncGLzY5CRrDi8DnIW1Av8RvUSqYHuQNw/edit"><FontAwesomeIcon icon={faFile} /> </a>
+        <a className={styles.icons} href="https://docs.google.com/document/d/1fOKLpAFszdn5DZmnYEyl9d1E6Datsn4wq7ilh8Jvlhk/edit"><FontAwesomeIcon icon={faFile} /> </a>
     </div>
 
     )
