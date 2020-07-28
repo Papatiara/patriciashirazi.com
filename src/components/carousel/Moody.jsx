@@ -3,7 +3,7 @@ import { css, keyframes } from 'emotion'
 import { MDBView, MDBMask } from "mdbreact";
 import { Link } from "react-router-dom";
 
-import selenium from '../../images/moody.png'
+import moody from '../../images/moody.png'
 
 const Moody = (props) => {
     return (
@@ -11,13 +11,15 @@ const Moody = (props) => {
             <MDBView hover zoom>
                 <img
                     className={styles.image}
-                    src={selenium}
+                    src={moody}
                     alt=""
                 />
                 <MDBMask className={styles.classname} >
                     <Link to="/moody">
                         <div className={styles.summary}>
-                            <p onClick={() => { props.showMoody(true) }}> Moody - A Web App I built using React... (Read More)</p>
+                        {/* <a href={"https://whispering-journey-70242.herokuapp.com/"}> Sentiment Analysis of texts </a> */}
+
+                            <a onClick={() => { props.showMoody(true) }}> Moody - A Web App I built using React... (Read More)</a>
                         </div>
                     </Link >
                 </MDBMask>
@@ -55,13 +57,16 @@ const styles = {
         text-align: center;
     `,
     summary: css`
-        margin-top: 82%;
+        margin-top: 76%;
         width: auto;
         height: auto;
         background-color: #008080;
         font-size: 20px;
         cursor: pointer;
         color: white;
+        a {
+            color: white;
+        }
         @media (max-width: 320px) {
             margin-top: 86%;
             width: 295px;
@@ -69,6 +74,7 @@ const styles = {
             font-size: 14px;
             margin-left: 0%;
         }`
+        
 }
 
 export default Moody;
