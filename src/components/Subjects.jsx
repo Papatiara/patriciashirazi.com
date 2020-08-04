@@ -29,7 +29,7 @@ const Subjects = (props) => {
 
 const styles = {
     buttons_container: css`
-    margin-top: 12%;
+    margin-top: 3%;
     margin-left: 15%;
         flex-wrap: wrap;
         width: 70%;

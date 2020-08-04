@@ -19,32 +19,37 @@ const Intro = () => {
         //     </div>
         // </div>
         <div>
-            <div className={styles.intro1_holder}>    </div>
+        <div className={styles.intro1_holder}>    </div>
             <div className={styles.secondBackground}>
-            {/* <div className={styles.partOne} ><img src={partOfBack} /> <img src={partTwo} /> </div> */}
-              
+            <div className={styles.partOne} ><img src={partOfBack} /> <img src={partTwo} /> </div>
+
                 <div className={styles.intro2_holder}>
-           
+
                     <img className={styles.img} src={me} />
                     <div className={styles.nameHolder}>
                         <div className={styles.myname}> PATRICIA SHIRAZI <br></br>
                             <div className={styles.description}>Full Stack Software Engineer</div>
                         </div>
                     </div>
-                  
+
                 </div>
-                {/* <div className={styles.bottom} >
+                 <div className={styles.bottom} >
                     <img src={partOfBack} />
                     <img src={partThree} />
-                </div> */}
-            </div>
-          
+                </div> 
+           </div>
+         {/* <div>  */}
+  
+      </div> 
      
-        </div>
+ 
     )
 }
 
 const styles = {
+    video: css`
+
+    `,
     background: css`
         height: 100vh;
         // width: 90%;
@@ -56,7 +61,7 @@ const styles = {
         justify-content: space-around;
         align-items: center;
     `,
-    name: css `
+    name: css`
         font-size: 64px;
         font-family: 'Montserrat Subrayada', sans-serif;
     `,

@@ -26,6 +26,8 @@ import Graduation_text from './components/articles/Graduation_text';
 import Math_text from './components/articles/Math_text';
 import Automation_text from './components/articles/Automation_text';
 import AboutMe from './components/AboutMe';
+import Video from './components/Video';
+
 
 
 
@@ -110,6 +112,7 @@ function App() {
           </div>
           <Header />
           <div className={styles.body}>
+            <Video />
             <Subjects showMoody={setClickMoody} showSubject={setClickBusiness} showGoogle={setCLickGoogle} showGraduation={setCLickGraduation} showAutomation={setClickAutomation} showMath={setClickMath}/>
             <Footer />
             {/* <AboutMe /> */}
@@ -122,7 +125,7 @@ function App() {
 
 const styles = {
   body: css`
-    margin-top: -10%;
+    margin-top: 5%;
     font-family: 'Zilla Slab', serif;
     overflow-x: hidden;
     font-size: 17px;

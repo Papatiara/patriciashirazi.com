@@ -3,7 +3,7 @@ import { css, keyframes } from 'emotion'
 import { MDBView, MDBMask } from "mdbreact";
 import { Link } from "react-router-dom";
 
-import moody from '../../images/moody.png'
+import moody from '../../images/Moody.png'
 
 const Moody = (props) => {
     return (
@@ -49,6 +49,7 @@ const styles = {
         `,
     image: css`
         animation: ${fadeInImage} 0.3s ease-out;
+        border: 2px solid #e4f6e0;
         `,
     classname: css`
         color: white;
