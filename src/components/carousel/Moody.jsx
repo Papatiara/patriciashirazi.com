@@ -3,7 +3,7 @@ import { css, keyframes } from 'emotion'
 import { MDBView, MDBMask } from "mdbreact";
 import { Link } from "react-router-dom";
 
-import moody from '../../images/Moody.png'
+import moody from '../../images/moody.png'
 
 const Moody = (props) => {
     return (
