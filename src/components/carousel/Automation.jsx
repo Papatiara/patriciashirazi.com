@@ -48,6 +48,7 @@ const styles = {
     color: white;
     font-size: 1.5em;
     font-weight: bold;
+    text-align: center;
     cursor: pointer;
     `
 }

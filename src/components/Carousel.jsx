@@ -22,7 +22,7 @@ const Carousel = (props) => {
     } if (props.matter === "Google") {
         return (
             <div className={styles.grid_selected}>
-                < Google />
+                < Google showGoogle={props.showGoogle}/>
                 < Automation />
             </div>
         )
@@ -30,22 +30,22 @@ const Carousel = (props) => {
         return (
             <div className={styles.grid_selected}>
                 < Automation />
-                < Moody />
+                < Moody showMoody={props.showMoody}/>
             </div>
         )
     } if (props.matter === "Entrepreneurship") {
         return (
             <div className={styles.grid_selected}>
-                < Business />
+                < Business showSubject={props.showSubject} />
             </div>
         )
     } return (
         <div className={styles.grid}>
-            < Moody />
-            < Business />
-            < Automation />
-            < Graduation />
-            < Google />
+            < Google showGoogle={props.showGoogle}/>
+            < Graduation showGraduation={props.showGraduation}/>
+            < Moody showMoody={props.showMoody}/>
+            < Business showSubject={props.showSubject} />
+            {/* < Automation /> */}
             < Math />
         </div>
     )
@@ -57,37 +57,39 @@ const styles = {
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
-    width: 850px;
+    width: 1150px;
     height: 550px;
     margin-top: 2%;
-    margin-left: 23.5%;
+    margin-right: 7px;
+    margin-left: 10.5%;
     @media (max-width: 800px) {
         display: flex;
         flex-wrap: wrap;
-        height: 1500px;
+        height: 1700px;
         width: 250px;
         align-items: center;
         justify-content: space-around;
+        flex-direction: row;
     }
     `,
     grid_selected: css`
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     width: 550px;
-    height: 500px;
+    height: 550px;
     margin-top: 2%;
+    cursor: pointer;
     margin-left: 35%;
     margin-top: 25px;
-    font-size: 21px;
-    text-align: center;
     @media (max-width: 800px) {
-        display: flex;
         flex-wrap: wrap;
-        height: 550px;
+        display: flex;
+        margin-top: 2%;
+        margin-left: 23.5%;
+        height: 650px;
         transition: height 2s;
-        width: 250px;
+        width: 300px;
         align-items: center;
-        justify-content: space-around;
     }
     `
 }

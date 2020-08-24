@@ -4,6 +4,7 @@ import { MDBView, MDBMask } from "mdbreact";
 
 import math from '../../images/math.jpeg'
 
+
 const Math = () => {
     return (
         <div className={styles.math}>
@@ -41,14 +42,14 @@ const styles = {
     cursor: pointer;
     `,
     image: css`
-    animation: ${fadeInImage} 0.2s ease-out;
-    `,
+    animation: ${fadeInImage} 0.3s ease-out;`,
     classname: css`
     height: 250px;
     color: white;
     font-size: 1.5em;
     font-weight: bold;
     cursor: pointer;
+    text-align: center;
     `
 }
 export default Math;
