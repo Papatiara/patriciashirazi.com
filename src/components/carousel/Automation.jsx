@@ -1,20 +1,25 @@
 import React from 'react';
 import { css, keyframes } from 'emotion'
 import { MDBView, MDBMask } from "mdbreact";
+import { Link } from "react-router-dom";
 
-import python from '../../images/python.png'
+import coding from '../../images/coding.png'
 
-const Automation = () => {
+const Automation = (props) => {
     return (
         <div className={styles.projects}>
             <MDBView hover zoom>
                 <img
                     className={styles.image}
-                    src={python}
+                    src={coding}
                     alt=""
                 />
-                <MDBMask className={styles.classname} overlay="cyan-light">
-                    <p> Automation </p>
+                <MDBMask className={styles.classname}>
+                    <Link to="/portfolio">
+                        <div className={styles.summary}>
+                            <p onClick={() => props.showAutomation(true)}> Building this portfolio from scratch using React Hooks... (Read More) </p>
+                        </div>
+                    </Link>
                 </MDBMask>
             </MDBView>
         </div>
@@ -37,20 +42,37 @@ const fadeInImage = keyframes` {
 
 const styles = {
     projects: css`
-    height: 250px;
-    width: 250px;
-    cursor: pointer;
+    height: 350px;
+    width: 320px;
+    margin-top: 9%;
     `,
     image: css`
-    animation: ${fadeInImage} 0.3s ease-in;
+    animation: ${fadeInImage} 0.3s ease-out;
     `,
     classname: css`
     color: white;
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
+<<<<<<< HEAD
+=======
+    `,
+    summary: css`
+    margin-top: 82%;
+    width: auto;
+    height: auto;
+    background-color: #008080;
+    font-size: 20px;
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
     cursor: pointer;
-    `
+    color: white;
+    @media (max-width: 320px) {
+        margin-top: 86%;
+        width: 300px;
+        height: auto;
+        font-size: 15px;
+        margin-left: 0%;
+    }`
 }
 
 export default Automation;

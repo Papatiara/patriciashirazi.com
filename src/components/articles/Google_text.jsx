@@ -1,14 +1,25 @@
+<<<<<<< HEAD
 import React, {useEffect} from 'react';
 import { css } from 'emotion'
 import { withRouter } from "react-router-dom";
 import Article_Header from './Article_Header';
 import nlp from "../../images/nlp.png";
+=======
+import React, { useEffect } from 'react';
+import { css } from 'emotion'
+import { withRouter } from "react-router-dom";
+import Article_Header from './Article_Header';
+
+
+import googleforbr from "../../images/googleforbr.png";
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
 
 const title = "Engineer at Google"
 const description = "A little of my experience working to improve Google Search in Brazil."
 
 
 const Google_text = (props) => {
+<<<<<<< HEAD
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
@@ -16,6 +27,21 @@ const Google_text = (props) => {
     const backHome = () => {
         props.showGoogle(false)
         props.history.push('/home')
+=======
+   
+    useEffect(() => {
+        if (props.history.action === "PUSH") {
+            window.scrollTo(0, 0)
+        } else {
+            props.showGoogle(false)
+            props.history.push('/');
+        }
+    })
+
+    const backHome = () => {
+        props.showGoogle(false)
+        props.history.push('/')
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
     }
     return (
         <article>
@@ -26,7 +52,10 @@ const Google_text = (props) => {
                     <p> In 2018 I graduated from the Hack Reactor Software Engineering Bootcamp and dived into the job hunt. I was confident of my skills as a full-stack Software Engineer, but I was also aware that I didn't have any experience, and positions on big corporations such as Google or Airbnb were, maybe, a little out of my league. </p>
                     <p> In fact, for any new graduate, the kick starts in their careers is always a challenge, and finding a differential can help in creating an advantage over other thousands of new graduates seeking their first chances. I found my differential when I realized that there weren't many Portuguese speakers in the tech industry here in the US, and if any business wants to localize its services and products to South America, the special attention to its biggest country will be necessary.</p>
                 </section>
+<<<<<<< HEAD
                 <img src={nlp} />
+=======
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
                 <section>
                     <h2>Bilingual Engineer</h2>
                     <p> The position required someone with technical knowledge and, besides the Portuguese fluency, the cultural expertise about Brazil. The job was just a perfect fit for me. After three rounds of interviews, I got the offer! </p>
@@ -43,8 +72,13 @@ const Google_text = (props) => {
                     </ul>
                 </section>
                 <section>
+<<<<<<< HEAD
                     <h2>Working at GooglePlex and my take-outs of my experience</h2>
                     <p> Using cutting edge technologies with the most talented engineers that a company like Google can have, was just the most amazing work experience of my career so far. </p>
+=======
+                    <h2>Working at GooglePlex and the highlights of my experience</h2>
+                    <p> Using cutting edge technologies with the most talented engineers that a company like Google can have, was the most amazing work experience of my career so far. </p>
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
                     <p> I was able to put on practice many of the skills I learned at HR, such as A/B testing, process automation, and JavaScript, as well as, learn new ones, for example, Selenium and Python.</p>
                     <p> Not to mention all the perks GooglePlex can offer! Even as a contractor, I had all the benefits of a Google Employee, it was fun working in such a fun and incredible office! </p>
                 </section>
@@ -55,6 +89,7 @@ const Google_text = (props) => {
 
 
 const styles = {
+<<<<<<< HEAD
     title_holder: css` 
         width: 100%;
         height: 180px;
@@ -85,6 +120,25 @@ const styles = {
     &:hover {
         font-weight: bold;
     }
+=======
+    body: css`
+        padding-top: 25px;
+        width: 90%;
+        margin: auto;
+    `,
+    backHome: css`
+        margin-top: 15px;
+        padding-left: 48px;
+        cursor: pointer;
+        &:hover {
+            font-weight: bold;
+            color: #008080;
+            font-size: 18px;
+    }
+`,
+    image: css`
+    width: 60%      
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
 `
 }
 

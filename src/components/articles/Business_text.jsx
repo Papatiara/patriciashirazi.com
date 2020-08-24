@@ -10,6 +10,7 @@ const title = "Rio Phone Repair";
 const description = "How I become a Co-founder and Operation manager of business from learning myself how to fix iPhones"
 
 const Business_text = (props) => {
+<<<<<<< HEAD
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
@@ -17,17 +18,37 @@ const Business_text = (props) => {
     const backHome = () => {
         props.showBusiness(false)
         props.history.push('/home')
+=======
+ 
+    useEffect(() => {
+        if (props.history.action === "PUSH") {
+            window.scrollTo(0, 0)
+        } else {
+            props.showBusiness(false)
+            props.history.push('/');
+        }
+    })
+
+    const backHome = () => {
+        props.showBusiness(false)
+        props.history.push('/')
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
     }
     return (
         <article>
             <Article_Header title={title} description={description} />
             <p className={styles.backHome} onClick={() => backHome()}>Patricia's Portfolio</p>
+<<<<<<< HEAD
             <body className={styles.body}>
+=======
+            <div className={styles.body}>
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
                 <section>
                     <p> In 2015 I was a Teacher in Rio de Janeiro, I had the opportunity to not only teach Mathematics but professionals skills, such as entrepreneurship, leadership, agile, to underprivileged students from favelas. During that time I wanted to put on practice some of the knowledge, which I was transmitting to my class.</p>
                     <p>After cracking my phone screen I asked my husband to replace it - he had learned how to do it a couple of years ago when he used to work in a phone store. It took 20 minutes to do so, which was very different from the stores that usually take 2 days to make a simple screen replacement.
 After seeing him replacing my phone screen a couple of times, I was able to do it myself and on that afternoon we had the idea of starting our own business. We created a Facebook page for the business with the original name Rio iPhone Repair and created a Facebook Ad for it claiming that we would go anywhere in Rio and replace the screen in 20 min. Very ambitious considering we didn't know every spot in Rio. But it worked! In a couple of weeks, we were all over the city fixing iPhones. </p>
                 </section>
+<<<<<<< HEAD
                 <img src={rir} />
                 <section>
                     <h2>How big does the business become?</h2>
@@ -36,6 +57,15 @@ After seeing him replacing my phone screen a couple of times, I was able to do i
                     <p>Since our model was working great in Rio, we expand to a nearby city Belo Horizonte. There, our business would be called IExpress BH.</p>
                 </section>
                 <img src={business} />
+=======
+                <img className={styles.image} src={rir} />
+                <section>
+                    <h2>How big does the business become?</h2>
+                    <p> After running the business for a few months, the demand increase and we hired and trained 3 more technicians and 1 Operation Manager. At that point, I would take care of the finances and customer service, as well as, social media and websites. </p>
+                    <p>Since our model was working great in Rio, we expand to a nearby city Belo Horizonte. There, our business would be called IExpress BH.</p>
+                </section>
+                <img className={styles.image2} src={business} />
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
                 <section>
                     <h2>What happened with the business</h2>
                     <p>After years of running the business in Brazil, we decided was the time for moving to San Diego - my husband's hometown. We took care of the business remotely for a while, but it was time to move on with our careers. </p>
@@ -45,12 +75,17 @@ After seeing him replacing my phone screen a couple of times, I was able to do i
                     <h3>Check it out!</h3>
                     <a href={"https://www.rioiphonerepair.com.br/"}> Rio iPhone Repair </a>
                 </section>
+<<<<<<< HEAD
             </body>
+=======
+            </div>
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
         </article>
     )
 }
 
 const styles = {
+<<<<<<< HEAD
     title_holder: css` 
         width: 100%;
         height: 180px;
@@ -73,6 +108,12 @@ const styles = {
     body: css`
         padding-top: 25px;
         padding-left: 48px;
+=======
+    body: css`
+        padding-top: 25px;
+        width: 90%;
+        margin: auto;
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
     `,
     backHome: css`
     margin-top: 15px;
@@ -80,7 +121,23 @@ const styles = {
     cursor: pointer;
     &:hover {
         font-weight: bold;
+<<<<<<< HEAD
     }`
+=======
+        color: #008080;
+        font-size: 18px;
+    }`,
+    image: css`
+    width: 70%;
+    height: auto;
+    margin-right: 5%;
+    margin-left: 5%;
+    `,
+    image2: css`
+    margin-right: 5%;
+    margin-left: 5%;
+    `
+>>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
 }
 
 export default withRouter(Business_text);
