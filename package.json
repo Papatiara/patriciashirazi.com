@@ -1,9 +1,6 @@
 {
   "name": "my-portfolio",
   "version": "0.1.0",
-  "engines": {
-    "node": "13.1.0"
-  },
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
@@ -13,7 +10,10 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "autoprefixer": "^9.8.6",
+    "colorette": "^1.2.0",
     "emotion": "^10.0.27",
+    "latest": "^0.2.0",
     "mdbreact": "^4.25.0",
     "react": "^16.12.0",
     "react-awesome-slider": "^4.1.0",
@@ -27,7 +27,7 @@
     "react-text-loop": "^2.3.0"
   },
   "scripts": {
-    "start": "react start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
