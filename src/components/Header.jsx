@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom";
 
 import { css } from 'emotion'
 
-<<<<<<< HEAD
 
 const Header = (props) => {
     const [mobileMenu, setMobileMenu] = useState(styles.mobile_options)
@@ -14,9 +13,6 @@ const Header = (props) => {
             behavior: 'smooth'
         })
     }
-=======
-import { css } from 'emotion'
->>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
 
     const scrollToJourney = () => {
         setMobileMenu(mobileMenu === styles.mobile_options ?styles.mobile_options_clicked :  styles.mobile_options)
@@ -26,7 +22,6 @@ import { css } from 'emotion'
         setMobileMenu(mobileMenu === styles.mobile_options ?styles.mobile_options_clicked :  styles.mobile_options)
         scrollToRef(props.projectsRef)
 
-<<<<<<< HEAD
     }
     const scrollToContact = () => {
         setMobileMenu(mobileMenu === styles.mobile_options ?styles.mobile_options_clicked :  styles.mobile_options)
@@ -42,15 +37,6 @@ import { css } from 'emotion'
         
     }
 
-=======
-const Header = () => {
-
-    return (<div id="header" className={styles.head}>
-        <a className={styles.icons} href="https://github.com/Papatiara"><FontAwesomeIcon icon={faGithub} /></a>
-        <a className={styles.icons} href="https://www.linkedin.com/in/patriciashirazi/"><FontAwesomeIcon icon={faLinkedin} /> </a>
-        <a className={styles.icons} href="https://docs.google.com/document/d/1fOKLpAFszdn5DZmnYEyl9d1E6Datsn4wq7ilh8Jvlhk/edit"><FontAwesomeIcon icon={faFile} /> </a>
-    </div>
->>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
 
     return (
         <div id="header" className={styles.head}>
@@ -80,7 +66,6 @@ const Header = () => {
 
 const styles = {
     head: css`
-<<<<<<< HEAD
     position: sticky;
     top: 0;
     z-index: 99;
@@ -88,15 +73,9 @@ const styles = {
     background-color: #FFF
     ;
     display: flex;
-=======
-    margin-top:0%;
-    background-color: black;
-        display: flex;
->>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
         justify-content: space-around;
         align-items: center;
         width: 100%;
-<<<<<<< HEAD
         height: 50px;
         @media (max-width: 1000px) {
             margin:0;
@@ -110,18 +89,6 @@ const styles = {
     cursor: pointer;
 
     `,
-=======
-        height: 100%;
-        @media (max-width: 1000px) {
-            margin-top:0%;
-           
-        },
-        @media (width: 768px) {
-            margin-top:0%;
-           width: 768px;
-        },
-    `,
->>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
     icons: css`
     color: white;
     cursor: pointer;
@@ -129,7 +96,6 @@ const styles = {
     &:hover {
         color: #708090;
     }
-<<<<<<< HEAD
     `,
     options: css`
         display:none;
@@ -182,9 +148,6 @@ const styles = {
 
     }`,
 
-=======
-    `
->>>>>>> fb2b7f47bfc5f9a3931b2418c9e643fc133733e2
 }
 
 export default Header;
