@@ -33,6 +33,7 @@ const Body = (props) => {
 const styles = {
     body: css`
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 
     `,
         projects: css`

@@ -72,6 +72,7 @@ const arrowAnimation = keyframes`{
 const styles = {
     scrollbody: css`
         scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
     `,
     intro_container: css`
     // border: 3px solid blue;

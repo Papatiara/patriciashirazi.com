@@ -38,6 +38,7 @@ const styles = {
 
   body: css`
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
    `,
 
 }

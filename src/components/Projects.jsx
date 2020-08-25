@@ -14,7 +14,7 @@ import tree from '../images/tree.png';
 
 
 
-const Projects = (props) => {
+const Projects = () => {
     return (
         <div className={styles.projects_container}  >
             <div className={styles.projects}>
@@ -44,7 +44,7 @@ const Projects = (props) => {
                     </div>
                     <div className={styles.project}>
                         <a
-                            href={"https://github.com/Papatiara/Moody"}
+                            href={"https://whispering-journey-70242.herokuapp.com/"}
                         >
                             <MDBView hover zoom>
                                 <img
@@ -79,7 +79,6 @@ const Projects = (props) => {
 
                     </div>
                     <div className={styles.project}>
-
                         <MDBView hover zoom>
                             <img
                                 className={styles.image}
@@ -87,7 +86,7 @@ const Projects = (props) => {
                                 alt=""
                             />
                             <MDBMask overlay="cyan-light" className={styles.project_title} >
-                                <p>patriciashirazi.com</p>
+                                <p>this portfolio</p>
                             </MDBMask>
                         </MDBView>
                     </div>
@@ -153,9 +152,13 @@ let styles = {
     project_title: css`
         color: white;
         cursor: pointer;
-        font-size: 1.0em;
+        font-size: 0.9em;
         font-weight: bold;
         text-align: center;
+        @media only screen and (max-width: 375px) and (min-width: 280px) {
+            font-size: 10px;
+            margin-auto;
+        }
 
     `,
     line: css`
