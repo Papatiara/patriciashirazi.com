@@ -19,6 +19,7 @@ const ScrollBody = () => {
 
 const styles = {
     body_container: css`
+        scroll-behavior: smooth !important;
         width: 100%;
         height: 100vh;
         display: flex;

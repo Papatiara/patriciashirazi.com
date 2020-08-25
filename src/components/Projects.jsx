@@ -120,12 +120,13 @@ let styles = {
         font-size: 22px;
       
     `,
+    
     projects_grid: css`
         // border: 3px solid pink;
         width: 50%;
         height: 600px;
         display: flex;
-        overflow-y:auto;
+        overflow-y:scroll;
         overflow-x:hidden;
         justify-content: space-around;
         flex-direction: row;
@@ -141,6 +142,8 @@ let styles = {
         }
         @media only screen and (max-width: 450px) and (min-width: 280px) {
             height: 350px;
+            width: 80%;
+
         }
       
         
