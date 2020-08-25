@@ -10,7 +10,7 @@ const Contact = (props) => {
                 <h2 className={styles.title}>  Contact </h2>
                 <p className={styles.line}></p>
                 <br></br>
-                <p className={styles.description}> Any questions? send me an <a href="mailto:shirazipatricia@gmail.com">email</a> </p>
+                <p className={styles.description}> Any questions? send an <a href="mailto:shirazipatricia@gmail.com">email</a> </p>
             </div>
         </div>
     )
@@ -34,7 +34,7 @@ const styles = {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-        width: 60%;
+        width: 70%;
         height: 100px;
     `,
     title: css`
@@ -48,6 +48,7 @@ const styles = {
     `,
     description: css`
         font-size: 18px;
+
     `
 
 }

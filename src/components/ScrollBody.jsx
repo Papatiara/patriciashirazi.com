@@ -31,7 +31,6 @@ const styles = {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // padding-top: 13%;
         background-color: #F5F5F5;
         // background-color: #FFF5EE;
     `,
@@ -63,14 +62,9 @@ const styles = {
         width: 100px;
     `,
 
-        projects: css`
-            // margin-top: 17%;
+    projects: css`
             width: 100%;
             height: 300px;        `,
-        contact: css`
-            // margin-top: 17%;
-            // width: 100%;
-            // height: 300px;
-    `
+
 }
 export default ScrollBody;

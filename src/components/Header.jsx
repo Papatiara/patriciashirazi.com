@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { withRouter } from "react-router-dom";
 
 import { css } from 'emotion'
 
@@ -29,7 +28,7 @@ const Header = (props) => {
 
     }
     const scrollToTop = () => {
-        setMobileMenu(mobileMenu === styles.mobile_options ?styles.mobile_options_clicked :  styles.mobile_options)
+        setMobileMenu(styles.mobile_options)
         scrollToRef(props.iRef)
     }
     const mobileMenuFunc = () => {
@@ -54,7 +53,7 @@ const Header = (props) => {
                 <a href="https://docs.google.com/document/d/14Vql67uuB3bDuDTiXHQQmFu1EwKp-fVUa5XfCbPQhX4/edit?usp=sharing">RESUME</a>
             </div>
             <div className={styles.options}>
-                <a className={styles.aTag} onClick={scrollToTop}>HOME</a>
+                <a onClick={scrollToTop}>HOME</a>
                 <a onClick={scrollToProjects}>PROJECTS</a>
                 <a onClick={scrollToJourney} >JOURNEY</a>
                 <a onClick={scrollToContact}>CONTACT</a>

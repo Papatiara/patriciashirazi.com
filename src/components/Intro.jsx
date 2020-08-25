@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { css, keyframes } from 'emotion'
 import ScrollIntoView from 'react-scroll-into-view'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,16 +7,8 @@ import SplitText from 'react-pose-text';
 
 
 
-
-
-
 import me from '../images/me.jpeg'
-import me2 from '../images/me2.png'
 
-
-
-let intViewportHeight = window.innerHeight;
-let toString = intViewportHeight.toString() + "px"
 
 const charPoses = {
     exit: { opacity: 0, y: 20 },
@@ -34,6 +26,7 @@ const Intro = (props) => {
     const showMore = () => {
         props.arrowClick(true)
     }
+
     return (
         <div className={styles.intro_container}>
             <div className={styles.intro_and_arrow_container}>
@@ -62,7 +55,7 @@ const Intro = (props) => {
     )
 }
 
-const arrowAnimation = keyframes `{
+const arrowAnimation = keyframes`{
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
       }
@@ -74,7 +67,7 @@ const arrowAnimation = keyframes `{
       }
 }`
 
-  
+
 
 const styles = {
     intro_container: css`

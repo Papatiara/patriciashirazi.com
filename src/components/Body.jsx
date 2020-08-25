@@ -16,7 +16,7 @@ const Body = (props) => {
     const contactsRef = useRef(null)
 
     return (
-        <div>
+        <div className={styles.body}>
             <Header iRef={props.introRef} contactsRef={contactsRef} projectsRef={projectsRef} journeyRef={journeyRef} />
             <ScrollBody  />
             <Projects projectsRef={projectsRef}/>
@@ -28,6 +28,10 @@ const Body = (props) => {
     )
 }
 const styles = {
+    body: css`
+    scroll-behavior: smooth;
+
+    `,
         projects: css`
             // margin-top: 17%;
             width: 100%;
