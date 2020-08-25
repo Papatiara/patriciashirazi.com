@@ -106,8 +106,8 @@ let styles = {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        @media only screen and (max-width: 375px) and (min-width: 280px) {
-            height: 700px;
+        @media only screen and (max-width: 450px) and (min-width: 280px) {
+            height: 900px;
         }
     `,
     projects: css`
@@ -131,16 +131,16 @@ let styles = {
         justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
-        @media (min-width: 500px){
-            width: 550px;
-            height: 500px;
-            display: flex;
-            justify-content: space-around;
-            flex-direction: row;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-        @media only screen and (max-width: 450px) and (min-width: 280px) {
+        // @media (width: 450px){
+        //     width: 550px;
+        //     height: 500px;
+        //     display: flex;
+        //     justify-content: space-around;
+        //     flex-direction: row;
+        //     flex-wrap: wrap;
+        //     margin-top: 10px;
+        // }
+        @media only screen and (max-width: 320px) and (min-width: 280px) {
             height: 350px;
             width: 80%;
 
@@ -149,7 +149,7 @@ let styles = {
         
     `,
     project: css`
-        @media only screen and (max-width: 450px) and (min-width: 280px) {
+        @media only screen and (max-width: 320px) and (min-width: 280px) {
             margin-top: 10px;
         }
     `,
