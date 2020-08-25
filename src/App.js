@@ -13,15 +13,10 @@ import {
 
 
 import Intro from './components/Intro';
-import Body from './components/Body';
 
 
 function App() {
   const introRef = useRef(null)
-
-
-  const [seeMore, setSeeMore] = useState(false)
-
 
   return (
     <Router>

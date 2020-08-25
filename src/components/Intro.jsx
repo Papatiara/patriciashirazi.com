@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { css, keyframes } from 'emotion'
 import ScrollIntoView from 'react-scroll-into-view'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import SplitText from 'react-pose-text';
 
+import '../App.css';
 
 import Body from './Body';
 
