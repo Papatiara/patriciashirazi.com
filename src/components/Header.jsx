@@ -84,10 +84,12 @@ const styles = {
         float: right;
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-size: 22px;
-        cursor: pointer;
+        cursor: pointer;   
+        scroll-behavior: smooth;
     `,
     options: css`
         display:none;
+        scroll-behavior: smooth;
         @media(min-width: 900px){
             // border: 3px solid blue;
             display: flex;
@@ -105,6 +107,7 @@ const styles = {
     `,
     mobile_menu: css`
         display: none;
+        scroll-behavior: smooth;
         @media(max-width: 900px){
             display: flex;
             width: 35px;
@@ -129,10 +132,12 @@ const styles = {
             width: 50%;
             left: 0;
             z-index: 99;
+            scroll-behavior: smooth;
             a {
                 cursor: pointer;
                 margin-top: 10px;
                 margin-left: 30%;
+                scroll-behavior: smooth;
             }
         }`,
 

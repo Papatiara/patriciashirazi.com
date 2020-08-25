@@ -19,11 +19,11 @@ const Body = (props) => {
         <div className={styles.body}>
             <Header iRef={props.iRef} contactsRef={contactsRef} projectsRef={projectsRef} journeyRef={journeyRef} />
             <ScrollBody />
-            <div ref={projectsRef}></div>
+            <div className={styles.refs} ref={projectsRef}></div>
             <Projects projectsRef={projectsRef}/>
-            <div ref={journeyRef}></div>
+            <div className={styles.refs} ref={journeyRef}></div>
             <Journey Jref={journeyRef}  />
-            <div ref={contactsRef}></div>
+            <div className={styles.refs} ref={contactsRef}></div>
             <Contact Cref={contactsRef}/>
             <Footer />
         </div>
@@ -35,6 +35,9 @@ const styles = {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 
+    `,
+    refs: css`
+    scroll-behavior: smooth;
     `,
         projects: css`
             // margin-top: 17%;

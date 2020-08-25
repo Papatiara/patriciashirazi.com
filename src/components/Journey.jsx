@@ -100,6 +100,7 @@ const Journey = (props) => {
 const styles = {
     container_slides_title: css`
         background-color: #F5F5F5;
+        scroll-behavior: smooth;
     // border: 3px solid purple;
         width: 100%;
         height: 100vh;

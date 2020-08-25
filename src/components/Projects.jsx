@@ -99,6 +99,7 @@ const Projects = () => {
 
 let styles = {
     projects_container: css`
+        scroll-behavior: smooth;
         width: 100%;
         height: 100vh;
         display: flex;
@@ -139,7 +140,7 @@ let styles = {
             margin-top: 10px;
         }
         @media only screen and (max-width: 450px) and (min-width: 280px) {
-            height: 300px;
+            height: 350px;
         }
       
         

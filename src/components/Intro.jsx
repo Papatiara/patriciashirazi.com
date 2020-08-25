@@ -146,7 +146,7 @@ const styles = {
     scroll: css`
         // height: 20px;
         // border: 3px solid white;
-
+        scroll-behavior: smooth;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -160,6 +160,7 @@ const styles = {
         // background-color:         #254769
         font-size: 24px;
         animation: ${arrowAnimation} 2s infinite;
+        scroll-behavior: smooth;
       `
 }
 

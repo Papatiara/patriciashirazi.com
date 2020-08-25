@@ -19,6 +19,7 @@ const Contact = () => {
 const styles = {
     contact_container: css`
         background-color: white;
+        scroll-behavior: smooth;
         width: 100%;
         height: 90vh;
         display: flex;
