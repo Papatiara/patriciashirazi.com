@@ -126,6 +126,7 @@ let styles = {
         height: 600px;
         display: flex;
         overflow-y:auto;
+        overflow-x:hidden;
         justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
@@ -138,15 +139,14 @@ let styles = {
             flex-wrap: wrap;
             margin-top: 10px;
         }
-        @media only screen and (max-width: 375px) and (min-width: 280px) {
+        @media only screen and (max-width: 450px) and (min-width: 280px) {
             height: 300px;
-            overflow-y:auto;
         }
       
         
     `,
     project: css`
-        @media only screen and (max-width: 375px) and (min-width: 280px) {
+        @media only screen and (max-width: 450px) and (min-width: 280px) {
             margin-top: 10px;
         }
     `,

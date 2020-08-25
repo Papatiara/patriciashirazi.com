@@ -48,9 +48,5 @@ const styles = {
         width: 100px;
     `,
 
-    projects: css`
-        width: 100%;
-        height: 300px;        `,
-
 }
 export default ScrollBody;

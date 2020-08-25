@@ -26,6 +26,7 @@ const styles = {
         justify-content: center;
         flex-direction: column;
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        
     `,
     contact: css`
     // border: 3px solid blue;
@@ -35,6 +36,10 @@ const styles = {
     flex-direction: column;
         width: 70%;
         height: 100px;
+        @media only screen and (max-width: 375px) and (min-width: 280px) {
+            width: 100%;
+
+        }
     `,
     title: css`
         font-size: 22px;

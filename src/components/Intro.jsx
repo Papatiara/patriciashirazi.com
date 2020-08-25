@@ -25,7 +25,7 @@ const charPoses = {
 const Intro = (props) => {
 
     return (
-        <div>
+        <div className={styles.scrollbody}>
             <div className={styles.intro_container}>
                 <div className={styles.intro_and_arrow_container}>
                     <div className={styles.pic_and_title_container}>
@@ -70,6 +70,9 @@ const arrowAnimation = keyframes`{
 
 
 const styles = {
+    scrollbody: css`
+        scroll-behavior: smooth;
+    `,
     intro_container: css`
     // border: 3px solid blue;
         height:100vh;
@@ -78,8 +81,7 @@ const styles = {
         justify-content: center;
         align-items: center;
         color: #F5F5F5;
-
-        background-color:         #254769;
+        background-color: #254769;
         ;
 
     `,
@@ -92,6 +94,9 @@ const styles = {
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
+        @media only screen and (max-width: 450px) and (min-width: 280px) {
+            height: 90%;
+        }
     `,
     pic_and_title_container: css`
         // border: 3px solid red;
@@ -103,6 +108,8 @@ const styles = {
         @media only screen and (max-width: 450px) and (min-width: 280px) {
             width: 100%;
             height: 400px;
+            // border: 3px solid red;
+
         }
     `,
     name_title_container: css`
@@ -137,15 +144,16 @@ const styles = {
     `,
     scroll: css`
         // height: 20px;
+        // border: 3px solid white;
+
         display: flex;
         align-items: center;
         justify-content: center;
-        @media (min-width: 330px){
-            padding-top: 80px;
-            margin-bottom: 5px;
-
-
-        }
+        // @media only screen and (max-width: 375px) and (min-width: 280px) {
+        //     margin-top: 0px;
+        //     margin-bottom: 70px;
+         
+        // }
       `,
     icon: css`
         // background-color:         #254769

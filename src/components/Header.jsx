@@ -75,6 +75,7 @@ const styles = {
         align-items: center;
         width: 100%;
         height: 50px;
+        scroll-behavior: smooth;
         @media (max-width: 1000px) {
             margin:0;
         },

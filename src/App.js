@@ -23,38 +23,22 @@ function App() {
   const [seeMore, setSeeMore] = useState(false)
 
 
-  // if (!seeMore) {
-  //   return (
-  //   <Router>
-  //     <Route path="/">
-  //       <div ref={introRef} className={styles.firstbody}>
-  //         <Intro arrowClick={setSeeMore} />
-  //         <div className={styles.body}>
-  //           <Body introRef={introRef}/>
-  //         </div>
-  //       </div>
-  //     </Route>
-  //   </Router>
-  // )
-  // }
-  // else {
   return (
     <Router>
       <Route path="/">
-        <div ref={introRef}>
+        <div ref={introRef} className={styles.body}>
           <Intro introRef={introRef} />
         </div>
       </Route>
     </Router>
   )
 }
-// }
 
 const styles = {
 
-  // body: css`
-  //   margin-top: 0%;
-  // `,
+  body: css`
+    scroll-behavior: smooth;
+   `,
 
 }
 
