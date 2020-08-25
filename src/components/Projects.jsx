@@ -99,7 +99,7 @@ const Projects = () => {
 
 let styles = {
     projects_container: css`
-        scroll-behavior: smooth;
+        scroll-behavior: smooth !important;
         width: 100%;
         height: 100vh;
         display: flex;
@@ -107,6 +107,7 @@ let styles = {
         justify-content: center;
         flex-direction: column;
         @media only screen and (max-width: 450px) and (min-width: 280px) {
+            scroll-behavior: smooth !important;
             height: 900px;
         }
     `,
@@ -123,8 +124,8 @@ let styles = {
     
     projects_grid: css`
         // border: 3px solid pink;
-        width: 50%;
-        height: 600px;
+        width: 550px;
+        height: 400px;
         display: flex;
         overflow-y:scroll;
         overflow-x:hidden;
@@ -140,10 +141,15 @@ let styles = {
         //     flex-wrap: wrap;
         //     margin-top: 10px;
         // }
+        @media only screen and (max-width: 450px) and (min-width: 321px) {
+            scroll-behavior: smooth !important;
+            height: 700px;
+            width: 80%;
+        }
         @media only screen and (max-width: 320px) and (min-width: 280px) {
+            scroll-behavior: smooth !important;
             height: 350px;
             width: 80%;
-
         }
       
         
@@ -160,6 +166,7 @@ let styles = {
         font-weight: bold;
         text-align: center;
         @media only screen and (max-width: 375px) and (min-width: 280px) {
+            scroll-behavior: smooth !important;
             font-size: 10px;
             margin-auto;
         }

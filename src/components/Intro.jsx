@@ -46,7 +46,7 @@ const Intro = (props) => {
                             </div>
                         </div>
                     </div>
-                    <ScrollIntoView selector="#header" className={styles.scroll} >
+                    <ScrollIntoView smooth={true} selector="#header" className={styles.scroll} >
                         <a> <FontAwesomeIcon className={styles.icon} icon={faAngleDown} /> </a>
                     </ScrollIntoView>
                 </div>
