@@ -19,12 +19,11 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Journey = (props) => {
     return (
-        <div ref={props.Jref} className={styles.container_slides_title}>
+        <div className={styles.container_slides_title}>
             <div className={styles.title_line}>
             <h2 className={styles.title}> My Journey </h2>
             <p className={styles.line}></p>
             </div>
-                {/* <br></br> */}
             <div className={styles.slides_container}>
                 <div>
                     <AutoplaySlider
@@ -100,8 +99,8 @@ const Journey = (props) => {
 }
 const styles = {
     container_slides_title: css`
-        background-color: #F0FFF0;
-        // border: 3px solid purple;
+        background-color: #F5F5F5;
+    // border: 3px solid purple;
         width: 100%;
         height: 100vh;
         display: flex;
@@ -123,7 +122,7 @@ const styles = {
   
     slide: css`
         // border: 3px solid red;
-        background-color: #F0FFF0;
+        background-color: #F5F5F5;
         margin: auto;
         height: 300px;
         top:0px;
@@ -134,7 +133,7 @@ const styles = {
         // border: 3px solid red;
         width: 100%;
         heigth: 20%;
-        background-color: #F0FFF0;
+        background-color: #F5F5F5;
         img {
             float: right;
             border-radius: 80%
@@ -158,8 +157,8 @@ const styles = {
     `,
     slides_container: css`
     // border: 3px solid grey;
-        background-color: #F0FFF0;
-        width: 100%;
+    background-color: #F5F5F5;
+    width: 100%;
         height: 50%;
     `,
     line: css`

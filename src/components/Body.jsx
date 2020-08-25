@@ -17,10 +17,13 @@ const Body = (props) => {
 
     return (
         <div className={styles.body}>
-            <Header iRef={props.introRef} contactsRef={contactsRef} projectsRef={projectsRef} journeyRef={journeyRef} />
-            <ScrollBody  />
+            <Header iRef={props.iRef} contactsRef={contactsRef} projectsRef={projectsRef} journeyRef={journeyRef} />
+            <ScrollBody />
+            <div ref={projectsRef}></div>
             <Projects projectsRef={projectsRef}/>
+            <div ref={journeyRef}></div>
             <Journey Jref={journeyRef}  />
+            <div ref={contactsRef}></div>
             <Contact Cref={contactsRef}/>
             <Footer />
         </div>

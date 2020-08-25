@@ -65,36 +65,25 @@ const Header = (props) => {
 
 const styles = {
     head: css`
-    position: sticky;
-    top: 0;
-    z-index: 99;
-    bottom: 20px;
-    background-color: #FFF
-    ;
-    display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        bottom: 20px;
+        background-color: #FFF;
+        display: flex;
         justify-content: space-around;
         align-items: center;
         width: 100%;
         height: 50px;
         @media (max-width: 1000px) {
             margin:0;
-
         },
     `,
     name: css`
-    float: right;
-    font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 22px;
-    cursor: pointer;
-
-    `,
-    icons: css`
-    color: white;
-    cursor: pointer;
-    font-size: 86px;
-    &:hover {
-        color: #708090;
-    }
+        float: right;
+        font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 22px;
+        cursor: pointer;
     `,
     options: css`
         display:none;
@@ -111,10 +100,10 @@ const styles = {
         }
     `,
     mobile_menu_container: css`
-      cursor: pointer;
+        cursor: pointer;
     `,
     mobile_menu: css`
-    display: none;
+        display: none;
         @media(max-width: 900px){
             display: flex;
             width: 35px;
@@ -124,28 +113,27 @@ const styles = {
         }
     `,
     mobile_options: css`
-    display: none;
+        display: none;
     `,
     mobile_options_clicked: css`
-    display: none;
-    @media(max-width: 900px){
-        display: flex;
-        justify-content: right;
-        flex-direction: column;
-        position: absolute;
-        background-color: white;
-        top: 45px;
-        height: 170px;
-        width: 50%;
-        left: 0;
-        z-index: 99;
-    a {
-        cursor: pointer;
-        margin-top: 10px;
-        margin-left: 30%;
-    }
-
-    }`,
+        display: none;
+        @media(max-width: 900px){
+            display: flex;
+            justify-content: right;
+            flex-direction: column;
+            position: absolute;
+            background-color: white;
+            top: 45px;
+            height: 170px;
+            width: 50%;
+            left: 0;
+            z-index: 99;
+            a {
+                cursor: pointer;
+                margin-top: 10px;
+                margin-left: 30%;
+            }
+        }`,
 
 }
 

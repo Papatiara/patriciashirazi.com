@@ -19,7 +19,7 @@ const styles = {
     footer: css`
         bottom: 0;
         margin-top: 0px;
-        background-color: black;
+        background-color: #254769;
         display: flex;
         align-items: center;
         justify-content: center;

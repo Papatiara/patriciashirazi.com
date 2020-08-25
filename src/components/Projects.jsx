@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { TransitionGroup } from 'react-transition-group';
+import React from 'react';
 import { MDBView, MDBMask } from "mdbreact";
 
 
 
-import { css, keyframes } from 'emotion'
+import { css } from 'emotion'
 
 import htg from '../images/HTG.png';
 import moody from '../images/m.png';
@@ -17,7 +16,7 @@ import tree from '../images/tree.png';
 
 const Projects = (props) => {
     return (
-        <div ref={props.projectsRef} className={styles.projects_container}  >
+        <div className={styles.projects_container}  >
             <div className={styles.projects}>
                 <h2> Recent Projects </h2>
                 <p className={styles.line}></p>
@@ -98,18 +97,6 @@ const Projects = (props) => {
 
     )
 }
-const fadeInImage = keyframes` {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-    // 0% {
-    //     width: 190%;
-    //     // height: 400px;
-    // } 
-    // 50% {
-    //     width: 40%;
-    //     height: 400px;
-    // }
-}`
 
 let styles = {
     projects_container: css`
@@ -119,21 +106,9 @@ let styles = {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        @media (min-width: 300px){
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-        @media (width: 320px){
-            margin-top: 50px;
-            margin-bottom: 50px;
+        @media only screen and (max-width: 375px) and (min-width: 280px) {
             height: 700px;
         }
-        @media (width: 280px){
-            margin-top: 50px;
-            margin-bottom: 50px;
-            height: 700px;
-        
-                }
     `,
     projects: css`
         width: 100%;
@@ -150,7 +125,7 @@ let styles = {
         width: 50%;
         height: 600px;
         display: flex;
-        // margin-top: 10px;
+        overflow-y:auto;
         justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
@@ -163,16 +138,17 @@ let styles = {
             flex-wrap: wrap;
             margin-top: 10px;
         }
-        @media (width: 320px){
-            height: 600px;
-            margin-bottom: 10px;
-        
+        @media only screen and (max-width: 375px) and (min-width: 280px) {
+            height: 300px;
+            overflow-y:auto;
         }
+      
         
     `,
     project: css`
-        animation: ${fadeInImage} 1s ease-in;
-
+        @media only screen and (max-width: 375px) and (min-width: 280px) {
+            margin-top: 10px;
+        }
     `,
     project_title: css`
         color: white;

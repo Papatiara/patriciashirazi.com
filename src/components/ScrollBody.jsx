@@ -2,14 +2,8 @@ import React from 'react';
 import { css } from 'emotion'
 
 
-import Projects from './Projects';
-import Journey from './Journey';
-import Contact from './Contact';
 
-
-
-
-const ScrollBody = (props) => {
+const ScrollBody = () => {
     return (
         <div className={styles.body_container}>
             <div className={styles.introduction}>
@@ -42,18 +36,10 @@ const styles = {
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-size: 22px;
         text-align: center;
-        @media (min-width: 330px){
-            font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px;
-        }
-        @media (width: 320px){
+        @media only screen and (max-width: 375px) and (min-width: 280px) {
             font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-size: 18px;
         }
-        @media (width: 280px){
-            font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 18px;
-                }
     `,
     line: css`
         border-bottom: 1px solid grey;
@@ -63,8 +49,8 @@ const styles = {
     `,
 
     projects: css`
-            width: 100%;
-            height: 300px;        `,
+        width: 100%;
+        height: 300px;        `,
 
 }
 export default ScrollBody;

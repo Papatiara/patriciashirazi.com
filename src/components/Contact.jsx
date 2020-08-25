@@ -2,10 +2,10 @@ import React, { useRef } from 'react';
 import { css } from 'emotion'
 
 
-const Contact = (props) => {
+const Contact = () => {
 
     return (
-        <div className={styles.contact_container} ref={props.Cref}>
+        <div className={styles.contact_container}>
             <div className={styles.contact}>
                 <h2 className={styles.title}>  Contact </h2>
                 <p className={styles.line}></p>
@@ -18,8 +18,7 @@ const Contact = (props) => {
 
 const styles = {
     contact_container: css`
-        // margin-top: 300px;
-        background-color: #F5F5F5;
+        background-color: white;
         width: 100%;
         height: 90vh;
         display: flex;

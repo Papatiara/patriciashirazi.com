@@ -6,6 +6,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import SplitText from 'react-pose-text';
 
 
+import Body from './Body';
 
 import me from '../images/me.jpeg'
 
@@ -23,34 +24,33 @@ const charPoses = {
 
 const Intro = (props) => {
 
-    const showMore = () => {
-        props.arrowClick(true)
-    }
-
     return (
-        <div className={styles.intro_container}>
-            <div className={styles.intro_and_arrow_container}>
-                <div className={styles.pic_and_title_container}>
-                    <div>
-                        <img src={me} className={styles.img} />
-                    </div>
-                    <div className={styles.name_title_container}>
-                        <div className={styles.name}>
-                            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-                                Patricia Shirazi
-                </SplitText>
+        <div>
+            <div className={styles.intro_container}>
+                <div className={styles.intro_and_arrow_container}>
+                    <div className={styles.pic_and_title_container}>
+                        <div>
+                            <img src={me} className={styles.img} />
                         </div>
-                        <div className={styles.title}>
-                            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-                                full-stack software engineer
+                        <div className={styles.name_title_container}>
+                            <div className={styles.name}>
+                                <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+                                    Patricia Shirazi
                 </SplitText>
+                            </div>
+                            <div className={styles.title}>
+                                <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+                                    full-stack software engineer
+                </SplitText>
+                            </div>
                         </div>
                     </div>
+                    <ScrollIntoView smooth={true} selector="#header" className={styles.scroll} >
+                        <a> <FontAwesomeIcon className={styles.icon} icon={faAngleDown} /> </a>
+                    </ScrollIntoView>
                 </div>
-                <ScrollIntoView smooth={true} selector="#header" className={styles.scroll} >
-                    <a onClick={showMore}> <FontAwesomeIcon className={styles.icon} icon={faAngleDown} /> </a>
-                </ScrollIntoView>
             </div>
+            <Body iRef={props.introRef}/>
         </div>
     )
 }
@@ -79,8 +79,7 @@ const styles = {
         align-items: center;
         color: #F5F5F5;
 
-        // background-color: #F5F5F5;
-        background-color:         #254769
+        background-color:         #254769;
         ;
 
     `,
@@ -101,6 +100,10 @@ const styles = {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        @media only screen and (max-width: 450px) and (min-width: 280px) {
+            width: 100%;
+            height: 400px;
+        }
     `,
     name_title_container: css`
         // border: 3px solid blue;
@@ -114,11 +117,9 @@ const styles = {
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 200;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
-        @media (width: 320px){
-            font-size: 26px;
-        }
-        @media (width: 280px){
-            font-size: 26px;
+        @media only screen and (max-width: 450px) and (min-width: 280px) {
+            font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 32px;
         }
     `,
     title: css`
@@ -126,11 +127,9 @@ const styles = {
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 200;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
-        @media (width: 320px){
-            font-size: 16px;
-        }
-        @media (width: 280px){
-            font-size: 16px;
+        @media only screen and (max-width: 450px) and (min-width: 280px) {
+            font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
         }
     `,
     img: css`
@@ -138,9 +137,6 @@ const styles = {
     `,
     scroll: css`
         // height: 20px;
-        background-color:         #254769
-
-        // padding-top: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -151,16 +147,6 @@ const styles = {
 
         }
       `,
-    // arrow_container: css`
-    //     width: 35px;
-    //     height: 35px;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;        
-    //     border: 2px solid black;
-    //     border-radius: 50%;
-    //     color: black;
-    // `,
     icon: css`
         // background-color:         #254769
         font-size: 24px;
