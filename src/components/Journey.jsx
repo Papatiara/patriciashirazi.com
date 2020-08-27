@@ -17,7 +17,7 @@ import { css } from 'emotion'
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 
-const Journey = (props) => {
+const Journey = () => {
     return (
         <div className={styles.container_slides_title}>
             <div className={styles.title_line}>

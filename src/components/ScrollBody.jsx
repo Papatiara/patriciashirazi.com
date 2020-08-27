@@ -20,6 +20,7 @@ const ScrollBody = () => {
 const styles = {
     body_container: css`
         scroll-behavior: smooth !important;
+        -webkit-overflow-scrolling: touch !important;
         width: 100%;
         height: 100vh;
         display: flex;
@@ -27,20 +28,26 @@ const styles = {
         justify-content: center;
         align-items: center;
         background-color: #F5F5F5;
-        // background-color: #FFF5EE;
     `,
 
     introduction: css`
         // border: 3px solid brown; 
+        flex-wrap: wrap;
         margin-top: 20px;
         width: 70%;
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-size: 22px;
         text-align: center;
         @media only screen and (max-width: 375px) and (min-width: 280px) {
-            font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-size: 18px;
         }
+        // @media only screen and (max-height: 450px) and (min-height: 280px) {
+        //     font-size: 17px;
+        //     height: auto;
+        //     h2 {
+        //         font-size: 22px;
+        //     }
+         }
     `,
     line: css`
         border-bottom: 1px solid grey;

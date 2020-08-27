@@ -3,34 +3,9 @@ import React, {useState} from 'react';
 import { css } from 'emotion'
 
 
-const Header = (props) => {
+const Header = () => {
     const [mobileMenu, setMobileMenu] = useState(styles.mobile_options)
 
-    const scrollToRef = (ref) => {
-        window.scrollTo({
-            top: ref.current.offsetTop,
-            behavior: 'smooth'
-        })
-    }
-
-    const scrollToJourney = () => {
-        setMobileMenu(mobileMenu === styles.mobile_options ?styles.mobile_options_clicked :  styles.mobile_options)
-        scrollToRef(props.journeyRef)
-    }
-    const scrollToProjects = () => {
-        setMobileMenu(mobileMenu === styles.mobile_options ?styles.mobile_options_clicked :  styles.mobile_options)
-        scrollToRef(props.projectsRef)
-
-    }
-    const scrollToContact = () => {
-        setMobileMenu(mobileMenu === styles.mobile_options ?styles.mobile_options_clicked :  styles.mobile_options)
-        scrollToRef(props.contactsRef)
-
-    }
-    const scrollToTop = () => {
-        setMobileMenu(styles.mobile_options)
-        scrollToRef(props.iRef)
-    }
     const mobileMenuFunc = () => {
         setMobileMenu(mobileMenu === styles.mobile_options ?styles.mobile_options_clicked :  styles.mobile_options)
         
@@ -38,25 +13,25 @@ const Header = (props) => {
 
 
     return (
-        <div id="header" className={styles.head}>
-            <div onClick={scrollToTop} className={styles.name}>PATRICIA SHIRAZI</div>
+        <div id="header" className={styles.header_container}>
+            <div className={styles.name}><a className={styles.name} href="#/">PATRICIA SHIRAZI</a></div>
             <div onClick={mobileMenuFunc}className={styles.mobile_menu_container}>
                 <div className={styles.mobile_menu} ></div>
                 <div className={styles.mobile_menu} ></div>
                 <div className={styles.mobile_menu} ></div>
             </div>
             <div className={mobileMenu}>
-                <a onClick={scrollToTop}>HOME</a>
-                <a onClick={scrollToProjects}>PROJECTS</a>
-                <a onClick={scrollToJourney} >JOURNEY</a>
-                <a onClick={scrollToContact}>CONTACT</a>
+                <a onClick={() => setMobileMenu(styles.mobile_options)} href="#/">HOME</a>
+                <a onClick={mobileMenuFunc} href="#projects">PROJECTS</a>
+                <a onClick={mobileMenuFunc} href="#journey">JOURNEY</a>
+                <a onClick={mobileMenuFunc} href="#contact">CONTACT</a>
                 <a href="https://docs.google.com/document/d/14Vql67uuB3bDuDTiXHQQmFu1EwKp-fVUa5XfCbPQhX4/edit?usp=sharing">RESUME</a>
             </div>
-            <div className={styles.options}>
-                <a onClick={scrollToTop}>HOME</a>
-                <a onClick={scrollToProjects}>PROJECTS</a>
-                <a onClick={scrollToJourney} >JOURNEY</a>
-                <a onClick={scrollToContact}>CONTACT</a>
+            <div className={styles.web_options}>
+                <a href="#/">HOME</a>
+                <a href="#projects" tabIndex="1">PROJECTS</a>
+                <a href="#journey">JOURNEY</a>
+                <a href="#contact">CONTACT</a>
                 <a href="https://docs.google.com/document/d/14Vql67uuB3bDuDTiXHQQmFu1EwKp-fVUa5XfCbPQhX4/edit?usp=sharing">RESUME</a>
             </div>
         </div>
@@ -64,10 +39,10 @@ const Header = (props) => {
 }
 
 const styles = {
-    head: css`
+    header_container: css`
         position: sticky;
         top: 0;
-        z-index: 99;
+        z-index: 9;
         bottom: 20px;
         background-color: #FFF;
         display: flex;
@@ -76,6 +51,7 @@ const styles = {
         width: 100%;
         height: 50px;
         scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch !important;
         @media (max-width: 1000px) {
             margin:0;
         },
@@ -83,13 +59,16 @@ const styles = {
     name: css`
         float: right;
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: black;
         font-size: 22px;
         cursor: pointer;   
         scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch !important;
     `,
-    options: css`
+    web_options: css`
         display:none;
         scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch !important;
         @media(min-width: 900px){
             // border: 3px solid blue;
             display: flex;
@@ -98,7 +77,19 @@ const styles = {
             font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-size: 15px;
             a {
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch !important;
+                color: #333333;
                 cursor: pointer;
+                &:focus {
+                    color: red;  
+                };
+                &:hover {
+                    color: red;
+                };
+                &:active {
+                    color: red;
+                };
             }
         }
     `,
@@ -134,10 +125,23 @@ const styles = {
             z-index: 99;
             scroll-behavior: smooth;
             a {
-                cursor: pointer;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch !important;
                 margin-top: 10px;
                 margin-left: 30%;
                 scroll-behavior: smooth;
+                color: #333333;
+                cursor: pointer;
+                &:hover {
+                    color: #254769;
+                };
+                &:active {
+                    color: red;
+                };
+                &:focus {
+                    color: red;
+                }
+             
             }
         }`,
 

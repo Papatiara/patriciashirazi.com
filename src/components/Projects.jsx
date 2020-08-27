@@ -100,6 +100,7 @@ const Projects = () => {
 let styles = {
     projects_container: css`
         scroll-behavior: smooth !important;
+        -webkit-overflow-scrolling: touch !important;
         width: 100%;
         height: 100vh;
         display: flex;
@@ -110,6 +111,14 @@ let styles = {
             scroll-behavior: smooth !important;
             height: 900px;
         }
+        // @media only screen and (max-height: 450px) and (min-height: 280px) {
+        //     margin-top: 100px;
+        //     height: auto;
+
+        //     h2 {
+        //         font-size: 20px;
+        //     }
+        //  }
     `,
     projects: css`
         width: 100%;
@@ -132,15 +141,6 @@ let styles = {
         justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
-        // @media (width: 450px){
-        //     width: 550px;
-        //     height: 500px;
-        //     display: flex;
-        //     justify-content: space-around;
-        //     flex-direction: row;
-        //     flex-wrap: wrap;
-        //     margin-top: 10px;
-        // }
         @media only screen and (max-width: 450px) and (min-width: 321px) {
             scroll-behavior: smooth !important;
             height: 700px;
@@ -151,6 +151,11 @@ let styles = {
             height: 350px;
             width: 80%;
         }
+        // @media only screen and (max-height: 450px) and (min-height: 280px) {
+        //     overflow-x:auto;
+
+        //     }
+         
       
         
     `,

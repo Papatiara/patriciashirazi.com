@@ -2,17 +2,18 @@ import React from 'react';
 import { css } from 'emotion'
 
 
+
 const Contact = () => {
 
     return (
-        <div className={styles.contact_container}>
-            <div className={styles.contact}>
-                <h2 className={styles.title}>  Contact </h2>
-                <p className={styles.line}></p>
-                <br></br>
-                <p className={styles.description}> Any questions? send an <a href="mailto:shirazipatricia@gmail.com">email</a> </p>
+            <div className={styles.contact_container}>
+                <div className={styles.contact}>
+                    <h2 className={styles.title}>  Contact </h2>
+                    <p className={styles.line}></p>
+                    <br></br>
+                    <p className={styles.description}> Any questions? send an <a href="mailto:shirazipatricia@gmail.com">email</a> </p>
+                </div>
             </div>
-        </div>
     )
 }
 
@@ -26,8 +27,8 @@ const styles = {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        color: #262626;
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        
     `,
     contact: css`
     // border: 3px solid blue;
