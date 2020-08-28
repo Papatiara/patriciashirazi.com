@@ -1,8 +1,5 @@
 
-import React, { useRef } from 'react';
-import './App.css';
-import './index.css';
-
+import React, { useRef, useEffect } from 'react';
 
 import Intro from './components/Intro';
 
@@ -10,9 +7,14 @@ import Intro from './components/Intro';
 function App() {
   const introRef = useRef(null)
 
+  useEffect(() => {
+    console.log(introRef.current);
+  }, [introRef]);
+
+
   return (
-    <div id="/">
-      <Intro introRef={introRef} />
+    <div ref={introRef}>
+      <Intro intro={introRef} />
     </div>
   )
 }

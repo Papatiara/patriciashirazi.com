@@ -46,12 +46,14 @@ const Intro = (props) => {
                             </div>
                         </div>
                     </div>
-                    <ScrollIntoView smooth={true} selector="#header" className={styles.arrow_container} >
+                    <div className={styles.arrow_container}>
+                        <ScrollIntoView smooth={true} selector="#header" className={styles.arrow_container} >
                         <a> <FontAwesomeIcon className={styles.arrow} icon={faAngleDown} /> </a>
-                    </ScrollIntoView>
+                        </ScrollIntoView>
+                    </div>
                 </div>
             </div>
-            <Body iRef={props.introRef}/>
+            <Body i={props.intro} />
         </div>
     )
 }
@@ -174,6 +176,7 @@ const styles = {
         font-size: 24px;
         animation: ${arrowAnimation} 2s infinite;
         scroll-behavior: smooth;
+        color: white;
       `
 }
 

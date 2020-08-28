@@ -17,9 +17,9 @@ import { css } from 'emotion'
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 
-const Journey = () => {
+const Journey = (props) => {
     return (
-        <div className={styles.container_slides_title}>
+        <section className={styles.container_slides_title}>
             <div className={styles.title_line}>
             <h2 className={styles.title}> My Journey </h2>
             <p className={styles.line}></p>
@@ -93,7 +93,7 @@ const Journey = () => {
                     </AutoplaySlider>
                 </div>
             </div>
-        </div>
+        </section>
 
     )
 }

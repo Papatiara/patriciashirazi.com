@@ -8,18 +8,20 @@ import Projects from './Projects';
 import Journey from './Journey';
 import Contact from './Contact';
 
-const Body = () => {
-    
+const Body = (props) => {
+    const projectsRef = useRef(null);
+    const journeyRef = useRef(null);
+    const contactRef = useRef(null);
 
     return (
         <div className={styles.body}>
-            <Header />
+            <Header introRef={props.i} Pref={projectsRef} Cref={contactRef} Jref={journeyRef} />
             <ScrollBody />
-            <div className={styles.refs} id="projects"></div>
+            <div className={styles.refs} ref={projectsRef}></div>
             <Projects />
-            <div className={styles.refs} id="journey" ></div>
-            <Journey />
-            <div className={styles.refs} id="contact"></div>
+            <div className={styles.refs} ref={journeyRef}></div>
+            <Journey  />
+            <div className={styles.refs} ref={contactRef}></div>
             <Contact />
             <Footer />
         </div>

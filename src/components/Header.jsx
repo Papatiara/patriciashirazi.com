@@ -1,37 +1,64 @@
 import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
 
 import { css } from 'emotion'
 
 
-const Header = () => {
+const Header = (props) => {
     const [mobileMenu, setMobileMenu] = useState(styles.mobile_options)
 
     const mobileMenuFunc = () => {
-        setMobileMenu(mobileMenu === styles.mobile_options ?styles.mobile_options_clicked :  styles.mobile_options)
-        
+        setMobileMenu(mobileMenu === styles.mobile_options ? styles.mobile_options_clicked :  styles.mobile_options)
     }
+
+    const mobileHome = (ref) => {
+        window.scroll(0, ref.current.offsetTop);   
+        setMobileMenu(styles.mobile_options)
+    }
+
+
+    const scrollToRefMobile = (ref) => {
+        setMobileMenu(styles.mobile_options);
+        var scrollOptions = {
+            left: 0,
+            top: ref.current.offsetTop,
+            behavior: 'smooth',
+          }
+          window.scroll(scrollOptions)
+    }
+
+    const scrollToRef = (ref) => {
+        var scrollOptions = {
+            left: 0,
+            top: ref.current.offsetTop,
+            behavior: 'smooth',
+          }
+          window.scroll(scrollOptions)
+
+        //   window.scroll(0, ref.current.offsetTop) 
+    }   
 
 
     return (
         <div id="header" className={styles.header_container}>
-            <div className={styles.name}><a className={styles.name} href="#/">PATRICIA SHIRAZI</a></div>
+            <div className={styles.name}><a className={styles.name} onClick={() => scrollToRef(props.introRef)}>PATRICIA SHIRAZI</a></div>
             <div onClick={mobileMenuFunc}className={styles.mobile_menu_container}>
                 <div className={styles.mobile_menu} ></div>
                 <div className={styles.mobile_menu} ></div>
                 <div className={styles.mobile_menu} ></div>
             </div>
             <div className={mobileMenu}>
-                <a onClick={() => setMobileMenu(styles.mobile_options)} href="#/">HOME</a>
-                <a onClick={mobileMenuFunc} href="#projects">PROJECTS</a>
-                <a onClick={mobileMenuFunc} href="#journey">JOURNEY</a>
-                <a onClick={mobileMenuFunc} href="#contact">CONTACT</a>
+                <a onClick={() => mobileHome(props.introRef)}>HOME</a>
+                <a onClick={() => scrollToRefMobile(props.Pref)}>PROJECTS</a>
+                <a onClick={() => scrollToRefMobile(props.Jref)}>JOURNEY</a>
+                <a onClick={() => scrollToRefMobile(props.Cref)}>CONTACT</a>
                 <a href="https://docs.google.com/document/d/14Vql67uuB3bDuDTiXHQQmFu1EwKp-fVUa5XfCbPQhX4/edit?usp=sharing">RESUME</a>
             </div>
             <div className={styles.web_options}>
-                <a href="#/">HOME</a>
-                <a href="#projects" tabIndex="1">PROJECTS</a>
-                <a href="#journey">JOURNEY</a>
-                <a href="#contact">CONTACT</a>
+                <a onClick={() => scrollToRef(props.introRef)}>HOME</a>
+                <a onClick={() => scrollToRef(props.Pref)}>PROJECTS</a>
+                <a onClick={() => scrollToRef(props.Jref)}>JOURNEY</a>
+                <a onClick={() => scrollToRef(props.Cref)}>CONTACT</a>
                 <a href="https://docs.google.com/document/d/14Vql67uuB3bDuDTiXHQQmFu1EwKp-fVUa5XfCbPQhX4/edit?usp=sharing">RESUME</a>
             </div>
         </div>
