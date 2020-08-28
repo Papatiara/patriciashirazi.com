@@ -20,11 +20,12 @@ const styles = {
         bottom: 0;
         margin-top: 0px;
         background-color: #254769;
+        position-fixed;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 100px;
+        min-height: 100px;
         @media (max-width: 1000px) {
             margin:0;
 

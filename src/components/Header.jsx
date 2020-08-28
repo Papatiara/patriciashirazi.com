@@ -110,12 +110,15 @@ const styles = {
                 cursor: pointer;
                 &:focus {
                     color: red;  
+                    -webkit-overflow-scrolling: touch !important;
                 };
                 &:hover {
                     color: red;
+                    -webkit-overflow-scrolling: touch !important;
                 };
                 &:active {
                     color: red;
+                    -webkit-overflow-scrolling: touch !important;
                 };
             }
         }

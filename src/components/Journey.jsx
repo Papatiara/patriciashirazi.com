@@ -99,13 +99,14 @@ const Journey = (props) => {
 }
 const styles = {
     container_slides_title: css`
+        // border: 3px solid purple;
         background-color: #F5F5F5;
         scroll-behavior: smooth;
-    // border: 3px solid purple;
         width: 100%;
         height: 100vh;
+        min-height: 500px;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: column;
         text-align: center;
@@ -116,6 +117,7 @@ const styles = {
         height: 50px;
         display: flex;
         justify-content: center;
+        margin-top: 50px;
         align-items: center;
         flex-direction: column;
         text-align: center;
@@ -157,15 +159,18 @@ const styles = {
                 }
     `,
     slides_container: css`
-    // border: 3px solid grey;
-    background-color: #F5F5F5;
-    width: 100%;
-        height: 50%;
+        // border: 3px solid grey;
+        background-color: #F5F5F5;
+        width: 100%;
+        height: auto;
     `,
     line: css`
         border-bottom: 1px solid grey;
         width: 100px;
     `,
+    title: css`
+        margin-top: 20px;
+    `
 }
 
 export default Journey

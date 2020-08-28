@@ -99,10 +99,13 @@ const Projects = () => {
 
 let styles = {
     projects_container: css`
+        // border: 3px solid black;
+
         scroll-behavior: smooth !important;
         -webkit-overflow-scrolling: touch !important;
         width: 100%;
         height: 100vh;
+        min-height: 500px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -122,6 +125,7 @@ let styles = {
     `,
     projects: css`
         width: 100%;
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
