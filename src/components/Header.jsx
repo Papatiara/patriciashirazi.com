@@ -26,10 +26,10 @@ const Header = (props) => {
             document.body.scrollTop = document.documentElement.scrollTop = 0;
         }
         if (i < r) {
-        //   setTimeout(() => {
+          setTimeout(() => {
             window.scroll(0, r) 
                 scrollToRef(i + 100, ref);
-        //   },5);
+          },2);
         }
         // setMobileMenu(styles.mobile_options);
         // var scrollOptions = {
@@ -47,10 +47,10 @@ const Header = (props) => {
             document.body.scrollTop = document.documentElement.scrollTop = 0;
         }
         if (i < r) {
-        //   setTimeout(() => {
+          setTimeout(() => {
             window.scroll(0, r) 
                 scrollToRef(i + 100, ref);
-        //   },5);
+          },2);
         }
         // }
         // var scrollOptions = {

@@ -29,7 +29,7 @@ const Intro = () => {
 
     return (
         <div ref={introRef} className={styles.scrollbody_container}>
-            <div className={styles.intro_container}>
+            <section className={styles.intro_container}>
                 <div className={styles.intro_and_arrow_container}>
                     <div className={styles.pic_and_title_container}>
                         <div className={styles.img} >
@@ -50,11 +50,11 @@ const Intro = () => {
                     </div>
                     <div className={styles.arrow_container}>
                         <ScrollIntoView smooth={true} selector="#header" className={styles.arrow_container} >
-                        <a> <FontAwesomeIcon className={styles.arrow} icon={faAngleDown} /> </a>
+                            <FontAwesomeIcon className={styles.arrow} icon={faAngleDown} /> 
                         </ScrollIntoView>
                     </div>
                 </div>
-            </div>
+            </section>
             <Body i={introRef} />
         </div>
     )
