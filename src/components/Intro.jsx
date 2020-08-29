@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import { css, keyframes } from 'emotion'
 import ScrollIntoView from 'react-scroll-into-view'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -23,10 +23,12 @@ const charPoses = {
 
 
 
-const Intro = (props) => {
+const Intro = () => {
+    const introRef = useRef(null)
+
 
     return (
-        <div className={styles.scrollbody_container}>
+        <div ref={introRef} className={styles.scrollbody_container}>
             <div className={styles.intro_container}>
                 <div className={styles.intro_and_arrow_container}>
                     <div className={styles.pic_and_title_container}>
@@ -53,7 +55,7 @@ const Intro = (props) => {
                     </div>
                 </div>
             </div>
-            <Body i={props.intro} />
+            <Body i={introRef} />
         </div>
     )
 }
