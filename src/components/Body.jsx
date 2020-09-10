@@ -30,14 +30,13 @@ const Body = (props) => {
 }
 const styles = {
     body: css`
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch !important;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch !important;
     `,
     refs: css`
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch !important;
-    margin: auto;
-
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch !important;
+        margin-bottom: 10%;
     `,
 }
 

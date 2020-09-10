@@ -101,7 +101,6 @@ const styles = {
     container_slides_title: css`
         // border: 3px solid purple;
         background-color: #F5F5F5;
-        scroll-behavior: smooth;
         width: 100%;
         height: 100vh;
         min-height: 500px;
@@ -169,7 +168,7 @@ const styles = {
         width: 100px;
     `,
     title: css`
-        margin-top: 20px;
+        margin-top: 14px;
     `
 }
 
