@@ -56,7 +56,7 @@ const Projects = () => {
                     </a>
                 </div>
                 <div className={styles.project}>
-                    <a href={"https://whispering-journey-70242.herokuapp.com/"}>
+                    <a href={"https://github.com/Papatiara/Moody"}>
                         <MDBView hover zoom>
                             <img src={moody} alt="" />
                             <MDBMask overlay="cyan-light" className={styles.project_title} >
