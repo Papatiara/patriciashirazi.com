@@ -104,12 +104,7 @@ const styles = {
         @media only screen and (max-width: 450px) and (min-width: 280px) {
             height: 90%;
         }
-        // @media only screen and (max-height: 450px) and (min-height: 280px) {
-        //     width: 100%;
-        //     display: flex;
-        //     justify-content: flex-end;
-        //     flex-direction: column;
-        // }
+   
     `,
     pic_and_title_container: css`
         // border: 3px solid red;
@@ -124,13 +119,7 @@ const styles = {
             width: 100%;
             height: 400px;
         }
-        // @media only screen and (max-height: 450px) and (min-height: 280px) {
-        //     position: absolute;
-        //     display: flex;
-        //     justify-content: space-around;
-        //     top: 5px;
-        //     width: 100%;
-        //  }
+   
     `,
     name_title_container: css`
         // border: 3px solid white;
@@ -140,7 +129,6 @@ const styles = {
         justify-content: flex-end;
     `,
     name: css`
-        // font-size: 46px;
         font-size: 3.5vw;
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 200;
@@ -149,15 +137,11 @@ const styles = {
             font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-size: 32px;
         }
-        // @media only screen and (max-height: 450px) and (min-height: 280px) {
-        //     font-size: 32px;
-
-        // }
+    
     `,
     title: css`
         // font-size: 26px;
         font-size: 2.5vw;
-
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 200;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
@@ -165,9 +149,7 @@ const styles = {
             font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-size: 18px;
         }
-        // @media only screen and (max-height: 450px) and (min-height: 280px) {
-        //     font-size: 18px;
-        // }
+   
     `,
     img: css`
         // border: 3px solid lightblue;
@@ -182,9 +164,10 @@ const styles = {
         align-items: center;
         justify-content: center;
         -webkit-overflow-scrolling: touch !important;
-        // @media only screen and (max-height: 450px) and (min-height: 280px) {
-        //     margin-bottom: 50px;
-        // }
+        &:hover {
+            cursor: pointer;
+        }
+    
       `,
     arrow: css`
         font-size: 24px;
@@ -192,7 +175,7 @@ const styles = {
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch !important;
         color: white;
-
+        cursor: pointer;
       `
 }
 

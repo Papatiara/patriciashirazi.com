@@ -42,13 +42,6 @@ const styles = {
         text-align: center;
         @media only screen and (max-width: 375px) and (min-width: 280px) {
             font-size: 18px;
-        }
-        // @media only screen and (max-height: 450px) and (min-height: 280px) {
-        //     font-size: 17px;
-        //     height: auto;
-        //     h2 {
-        //         font-size: 22px;
-        //     }
          }
     `,
     line: css`

@@ -18,7 +18,7 @@ import slope from '../images/slope.png';
 const Projects = () => {
     return (
         <section className={styles.projects_container}  >
-            <h2> Recent Projects </h2>
+            <h2 className={styles.title}> Recent Projects </h2>
             <p className={styles.line}></p>
             {/* <br></br> */}
             <div className={styles.projects_grid}>
@@ -102,14 +102,15 @@ let styles = {
         align-items: center;
         justify-content: flex-start;
         flex-direction: column;
-        &:h2 {
-            font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 22px;
-        }
         @media only screen and (max-width: 450px) and (min-width: 280px) {
             height: auto;
         }
-     
+    `,
+
+    title: css`
+        font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2rem;
+        // font-weight: 300px;
     `,
 
     projects_grid: css`
