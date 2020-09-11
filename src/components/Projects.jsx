@@ -110,7 +110,6 @@ let styles = {
     title: css`
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-size: 2rem;
-        // font-weight: 300px;
     `,
 
     projects_grid: css`

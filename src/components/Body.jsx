@@ -36,7 +36,7 @@ const styles = {
     refs: css`
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch !important;
-        margin-bottom: 10%;
+        // margin-bottom: 10%;
     `,
 }
 

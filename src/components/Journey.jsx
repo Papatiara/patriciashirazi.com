@@ -166,7 +166,7 @@ const styles = {
         width: 100px;
     `,
     title: css`
-        margin-top: 14px;
+        margin-top: 16px;
     `
 }
 
