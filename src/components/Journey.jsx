@@ -124,7 +124,6 @@ const styles = {
   
     slide: css`
         // border: 3px solid red;
-        background-color: #F5F5F5;
         margin: auto;
         height: 300px;
         top:0px;
@@ -159,7 +158,6 @@ const styles = {
     `,
     slides_container: css`
         // border: 3px solid grey;
-        background-color: #F5F5F5;
         width: 100%;
         height: auto;
     `,

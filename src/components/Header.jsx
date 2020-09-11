@@ -13,31 +13,31 @@ const Header = (props) => {
     }
 
     const mobileHome = (ref) => {
-        window.scroll(0, ref.current.offsetTop);   
+        window.scroll({top: 0, left:0, behavior: "smooth"});   
         setMobileMenu(styles.mobile_options)
     }
 
 
     const scrollToRefMobile = (initialValue, ref) => {
-        setMobileMenu(styles.mobile_options);
-        let r = ref.current.offsetTop;
-        let i = initialValue;
-        if (r === 0) {
-            document.body.scrollTop = document.documentElement.scrollTop = 0;
-        }
-        if (i < r) {
-          setTimeout(() => {
-            window.scroll(0, r) 
-                scrollToRef(i + 100, ref);
-          },2);
-        }
         // setMobileMenu(styles.mobile_options);
-        // var scrollOptions = {
-        //     left: 0,
-        //     top: ref.current.offsetTop,
-        //     behavior: 'smooth',
-        //   }
-        //   window.scroll(scrollOptions)
+        // let r = ref.current.offsetTop;
+        // let i = initialValue;
+        // if (r === 0) {
+        //     document.body.scrollTop = document.documentElement.scrollTop = 0;
+        // }
+        // if (i < r) {
+        //   setTimeout(() => {
+        //     window.scroll(0, r) 
+        //         scrollToRef(i + 100, ref);
+        //   },2);
+        // }
+        setMobileMenu(styles.mobile_options);
+        var scrollOptions = {
+            left: 0,
+            top: ref.current.offsetTop,
+            behavior: 'smooth',
+          }
+          window.scroll(scrollOptions)
     }
 
     const scrollToRef = (initialValue, ref) => {
@@ -64,28 +64,28 @@ const Header = (props) => {
 
 
     return (
-        <div id="header" className={styles.header_container}>
+        <nav id="header" className={styles.header_container}>
             <div className={styles.name}><a className={styles.name} onClick={() => scrollToRef(0, props.introRef)}>PATRICIA SHIRAZI</a></div>
             <div onClick={mobileMenuFunc}className={styles.mobile_menu_container}>
                 <div className={styles.mobile_menu} ></div>
                 <div className={styles.mobile_menu} ></div>
                 <div className={styles.mobile_menu} ></div>
             </div>
-            <div className={mobileMenu}>
-                <a onClick={() => mobileHome(props.introRef)}>HOME</a>
-                <a onClick={() => scrollToRefMobile(0, props.Pref)}>PROJECTS</a>
-                <a onClick={() => scrollToRefMobile(0, props.Jref)}>JOURNEY</a>
-                <a onClick={() => scrollToRefMobile(0, props.Cref)}>CONTACT</a>
-                <a href="https://docs.google.com/document/d/14Vql67uuB3bDuDTiXHQQmFu1EwKp-fVUa5XfCbPQhX4/edit?usp=sharing">RESUME</a>
-            </div>
-            <div className={styles.web_options}>
-                <a onClick={() => scrollToRef(0, props.introRef)}>HOME</a>
-                <a onClick={() => scrollToRef(0, props.Pref)}>PROJECTS</a>
-                <a onClick={() => scrollToRef(0, props.Jref)}>JOURNEY</a>
-                <a onClick={() => scrollToRef(0, props.Cref)}>CONTACT</a>
-                <a href="https://docs.google.com/document/d/14Vql67uuB3bDuDTiXHQQmFu1EwKp-fVUa5XfCbPQhX4/edit?usp=sharing">RESUME</a>
-            </div>
-        </div>
+            <ul className={mobileMenu}>
+                <li><a onClick={() => mobileHome(props.introRef)}>HOME</a></li>
+                <li><a onClick={() => scrollToRefMobile(0, props.Pref)}>PROJECTS</a></li> 
+                <li><a onClick={() => scrollToRefMobile(0, props.Jref)}>JOURNEY</a></li>
+                <li><a onClick={() => scrollToRefMobile(0, props.Cref)}>CONTACT</a></li>
+                <li><a href="https://docs.google.com/document/d/19Qb-Vc6dS5hFHAGNGOo4bD6v9bwzFOS-pKzZ_abwaPc/edit?usp=sharing">RESUME</a></li>
+            </ul>
+            <ul className={styles.web_options}>
+                <li><a onClick={() => scrollToRef(0, props.introRef)}>HOME</a></li>
+                <li><a onClick={() => scrollToRef(0, props.Pref)}>PROJECTS</a></li>
+                <li><a onClick={() => scrollToRef(0, props.Jref)}>JOURNEY</a></li>
+                <li><a onClick={() => scrollToRef(0, props.Cref)}>CONTACT</a></li>
+                <li><a href="https://docs.google.com/document/d/19Qb-Vc6dS5hFHAGNGOo4bD6v9bwzFOS-pKzZ_abwaPc/edit?usp=sharing">RESUME</a></li>
+            </ul>
+        </nav>
     )
 }
 
@@ -117,6 +117,7 @@ const styles = {
         -webkit-overflow-scrolling: touch !important;
     `,
     web_options: css`
+        list-style-type: none;
         display:none;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch !important;
@@ -152,7 +153,6 @@ const styles = {
     `,
     mobile_menu: css`
         display: none;
-        scroll-behavior: smooth;
         @media(max-width: 900px){
             display: flex;
             width: 35px;
@@ -167,13 +167,16 @@ const styles = {
     mobile_options_clicked: css`
         display: none;
         @media(max-width: 900px){
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: right;
             flex-direction: column;
             position: absolute;
             background-color: white;
             top: 45px;
-            height: 170px;
+            height: auto;
             width: 50%;
             left: 0;
             z-index: 99;

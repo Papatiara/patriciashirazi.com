@@ -1,15 +1,10 @@
 
-import React, {useEffect } from 'react';
+import React from 'react';
 
 import Intro from './components/Intro';
 
 
 function App() {
-
-  // useEffect(() => {
-  //   console.log(introRef.current);
-  // }, [introRef]);
-
 
   return (
     <div>

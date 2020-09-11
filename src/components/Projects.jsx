@@ -94,6 +94,7 @@ const Projects = () => {
 let styles = {
     projects_container: css`
         // border: 3px solid black;
+        margin-top: 60px;
         width: 100vw;
         height: 100vh;
         min-height: 500px;
@@ -101,7 +102,7 @@ let styles = {
         align-items: center;
         justify-content: flex-start;
         flex-direction: column;
-        h2 & {
+        &:h2 {
             font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-size: 22px;
         }
