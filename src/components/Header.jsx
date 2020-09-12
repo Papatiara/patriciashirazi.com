@@ -16,7 +16,8 @@ const Header = (props) => {
     }
 
 
-    const scrollToRefMobile = (ref) => {
+    const scrollToRefMobile = (initialRef, ref) => {
+        console.log(ref)
         setMobileMenu(styles.mobile_options);
         var scrollOptions = {
             left: 0,
