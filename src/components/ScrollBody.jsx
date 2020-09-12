@@ -1,5 +1,6 @@
 import React from 'react';
-import { css } from 'emotion'
+
+import { css } from 'emotion';
 
 
 
@@ -19,8 +20,6 @@ const ScrollBody = () => {
 
 const styles = {
     body_container: css`
-        scroll-behavior: smooth !important;
-        -webkit-overflow-scrolling: touch !important;
         width: 100%;
         height: 100vh;
         min-height: 800px;
@@ -32,7 +31,6 @@ const styles = {
     `,
 
     introduction: css`
-        // border: 3px solid brown; 
         flex-wrap: wrap;
         margin-top: 50px;
         height: auto;

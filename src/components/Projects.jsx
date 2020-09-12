@@ -92,7 +92,6 @@ const Projects = () => {
 
 let styles = {
     projects_container: css`
-        // border: 3px solid black;
         margin-top: 60px;
         width: 100vw;
         height: 100vh;
@@ -112,7 +111,6 @@ let styles = {
     `,
 
     projects_grid: css`
-        // border: 3px solid pink;
         max-width: 720px ;
         height: auto;
         display: flex;

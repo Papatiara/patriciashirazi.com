@@ -1,30 +1,29 @@
 import React, {useState} from 'react';
 
-import { css } from 'emotion'
+import { css } from 'emotion';
 
 
 const Header = (props) => {
-    const [mobileMenu, setMobileMenu] = useState(styles.mobile_options)
+    const [mobileMenu, setMobileMenu] = useState(styles.mobile_options);
 
     const mobileMenuFunc = () => {
-        setMobileMenu(mobileMenu === styles.mobile_options ? styles.mobile_options_clicked :  styles.mobile_options)
+        setMobileMenu(mobileMenu === styles.mobile_options ? styles.mobile_options_clicked :  styles.mobile_options);
     }
 
     const mobileHome = () => {
         window.scroll({top: 0, left:0, behavior: "smooth"});   
-        setMobileMenu(styles.mobile_options)
+        setMobileMenu(styles.mobile_options);
     }
 
 
     const scrollToRefMobile = (initialRef, ref) => {
-        console.log(ref)
         setMobileMenu(styles.mobile_options);
         var scrollOptions = {
             left: 0,
             top: ref.current.offsetTop,
             behavior: 'smooth',
           }
-          window.scroll(scrollOptions)
+          window.scroll(scrollOptions);
     }
 
     const scrollToRef = (initialValue, ref) => {

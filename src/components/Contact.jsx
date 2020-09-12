@@ -6,14 +6,14 @@ import { css } from 'emotion'
 const Contact = () => {
 
     return (
-            <div className={styles.contact_container}>
-                <div className={styles.contact}>
-                    <h2 className={styles.title}>  Contact </h2>
-                    <p className={styles.line}></p>
-                    <br></br>
-                    <p className={styles.description}> Any questions? send an <a href="mailto:shirazipatricia@gmail.com">email</a> </p>
-                </div>
+        <div className={styles.contact_container}>
+            <div className={styles.contact}>
+                <h2 className={styles.title}>  Contact </h2>
+                <p className={styles.line}></p>
+                <br></br>
+                <p className={styles.description}> Any questions? send an <a href="mailto:shirazipatricia@gmail.com">email</a> </p>
             </div>
+        </div>
     )
 }
 

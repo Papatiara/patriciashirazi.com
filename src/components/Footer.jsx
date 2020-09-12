@@ -1,9 +1,10 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-import { css } from 'emotion'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+import { css } from 'emotion';
 
 
 const Footer = () => {
@@ -17,7 +18,6 @@ const Footer = () => {
                 <p> © 2020 Patricia Shirazi | shirazipatricia@gmail.com</p>
             </div>
         </footer>
-
     )
 }
 
@@ -59,7 +59,6 @@ const styles = {
         color: #F5F5F5;
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-size: 12px;
-
     `
 }
 

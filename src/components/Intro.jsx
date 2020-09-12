@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import { css, keyframes } from 'emotion'
 import ScrollIntoView from 'react-scroll-into-view'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -28,7 +28,7 @@ const Intro = () => {
 
 
     return (
-        <div ref={introRef} className={styles.scrollbody_container}>
+        <div ref={introRef}>
             <section className={styles.intro_container}>
                 <div className={styles.intro_and_arrow_container}>
                     <div className={styles.pic_and_title_container}>
@@ -50,7 +50,7 @@ const Intro = () => {
                     </div>
                     <div className={styles.arrow_container}>
                         <ScrollIntoView smooth={true} selector="#header" className={styles.arrow_container} >
-                            <FontAwesomeIcon className={styles.arrow} icon={faAngleDown} /> 
+                            <FontAwesomeIcon className={styles.arrow} icon={faAngleDown} />
                         </ScrollIntoView>
                     </div>
                 </div>
@@ -75,12 +75,7 @@ const arrowAnimation = keyframes`{
 
 
 const styles = {
-    scrollbody_container: css`
-        scroll-behavior: smooth !important;
-        -webkit-overflow-scrolling: touch;
-    `,
     intro_container: css`
-    //  border: 3px solid orange;
         width: auto;
         min-height: 400px;
         height:100vh;
@@ -92,7 +87,6 @@ const styles = {
         background-color: #254769;
     `,
     intro_and_arrow_container: css`
-        // border: 3px solid yellow;
         width: 100%;
         min-height: 400px;
         height: 100%;
@@ -107,7 +101,6 @@ const styles = {
    
     `,
     pic_and_title_container: css`
-        // border: 3px solid red;
         width: auto;
         min-height: 200px
         height: 300px;
@@ -122,7 +115,6 @@ const styles = {
    
     `,
     name_title_container: css`
-        // border: 3px solid white;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -140,7 +132,6 @@ const styles = {
     
     `,
     title: css`
-        // font-size: 26px;
         font-size: 2.5vw;
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 200;
@@ -152,18 +143,14 @@ const styles = {
    
     `,
     img: css`
-        // border: 3px solid lightblue;
         img {
             border-radius: 50%;     
         }
     `,
     arrow_container: css`
-    //  border: 3px solid white;
-        scroll-behavior: smooth;
         display: flex;
         align-items: center;
         justify-content: center;
-        -webkit-overflow-scrolling: touch !important;
         &:hover {
             cursor: pointer;
         }
@@ -172,8 +159,6 @@ const styles = {
     arrow: css`
         font-size: 24px;
         animation: ${arrowAnimation} 2s infinite;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch !important;
         color: white;
         cursor: pointer;
       `

@@ -3,15 +3,15 @@ import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 
-import business from '../images/business.jpg'
-import google from '../images/google.jpg'
-import teacher from '../images/teacherciee.jpg'
-import grad from '../images/grad.jpg'
-import hrgrad from '../images/hrgrad.jpg'
+import business from '../images/business.jpg';
+import google from '../images/google.jpg';
+import teacher from '../images/teacherciee.jpg';
+import grad from '../images/grad.jpg';
+import hrgrad from '../images/hrgrad.jpg';
 
 
 
-import { css } from 'emotion'
+import { css } from 'emotion';
 
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
@@ -85,7 +85,6 @@ const Journey = () => {
 }
 const styles = {
     container_slides_title: css`
-        // border: 3px solid purple;
         background-color: #F5F5F5;
         width: 100%;
         height: 100vh;
@@ -109,7 +108,6 @@ const styles = {
     `,
 
     slide: css`
-        // border: 3px solid red;
         margin: auto;
         height: 300px;
         top:0px;
@@ -117,7 +115,6 @@ const styles = {
     `,
 
     pic_description: css`
-        // border: 3px solid red;
         width: 100%;
         heigth: 20%;
         background-color: #F5F5F5;
@@ -128,7 +125,6 @@ const styles = {
     
     `,
     description: css`
-        // border: 3px solid yellow;
         font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-size: 20px;
         align-text: center;
@@ -141,7 +137,6 @@ const styles = {
         }
     `,
     slides_container: css`
-        // border: 3px solid grey;
         width: 100%;
         height: auto;
     `,

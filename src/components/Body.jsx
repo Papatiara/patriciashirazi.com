@@ -25,7 +25,6 @@ const Body = (props) => {
             <Contact />
             <Footer />
         </div>
-
     )
 }
 const styles = {
@@ -36,7 +35,6 @@ const styles = {
     refs: css`
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch !important;
-        // margin-bottom: 10%;
     `,
 }
 
