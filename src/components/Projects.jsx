@@ -19,72 +19,71 @@ const Projects = () => {
     return (
         <section className={styles.projects_container}  >
             <h2 className={styles.title}> Recent Projects </h2>
-            <p className={styles.line}></p>
-            {/* <br></br> */}
+            <hr className={styles.line} />
             <div className={styles.projects_grid}>
-                <div className={styles.project}>
+                <figure className={styles.project}>
                     <a href={"https://www.humboldtogo.com/"}>
                         <MDBView hover zoom >
                             <img src={htg} alt="" />
                             <MDBMask overlay="cyan-light" className={styles.project_title} >
                                 <p>Humboldt To Go</p>
-                                <p>Finding To-Go options during COVID-19</p>
+                                <figcaption>Finding To-Go options during COVID-19</figcaption>
                             </MDBMask>
                         </MDBView>
                     </a>
-                </div>
-                <div className={styles.project}>
+                </figure>
+                <figure className={styles.project}>
                     <a href={"https://github.com/Papatiara/pacman"}>
                         <MDBView hover zoom >
                             <img src={arcade} alt="" />
                             <MDBMask overlay="cyan-light" className={styles.project_title} >
                                 <p>Pacman</p>
-                                <p>React and TS implementation of Pacman</p>
+                                <figcaption>React and TS implementation of Pacman</figcaption>
                             </MDBMask>
                         </MDBView>
                     </a>
-                </div>
-                <div className={styles.project}>
+                </figure>
+                <figure className={styles.project}>
                     <a href={"https://github.com/Papatiara/slope"}>
                         <MDBView hover zoom >
                             <img src={slope} alt="" />
                             <MDBMask overlay="cyan-light" className={styles.project_title} >
                                 <p>Slope</p>
-                                <p>Vanilla JS implementation</p>
+                                <figcaption>Vanilla JS implementation</figcaption>
                             </MDBMask>
                         </MDBView>
                     </a>
-                </div>
-                <div className={styles.project}>
+                </figure>
+                <figure className={styles.project}>
                     <a href={"https://github.com/Papatiara/Moody"}>
                         <MDBView hover zoom>
                             <img src={moody} alt="" />
                             <MDBMask overlay="cyan-light" className={styles.project_title} >
                                 <p>Moody</p>
-                                <p>NLP analysis</p>
+                                <figcaption>NLP analysis</figcaption>
                             </MDBMask>
                         </MDBView>
                     </a>
-                </div>
-                <div className={styles.project}>
+                </figure>
+                <figure className={styles.project}>
                     <a href={"https://github.com/Papatiara/bst-or-bsct"}>
                         <MDBView hover zoom>
                             <img src={tree} alt="" />
                             <MDBMask overlay="cyan-light" className={styles.project_title} >
                                 <p>BST</p>
-                                <p>JS implementation of a Binary Search Tree</p>
+                                <figcaption>JS implementation of a Binary Search Tree</figcaption>
                             </MDBMask>
                         </MDBView>
                     </a>
-                </div>
-                <div className={styles.project}>
+                </figure>
+                <figure className={styles.project}>
                     <MDBView hover zoom>
                         <img src={portfolio} alt="" />
                         <MDBMask overlay="cyan-light" className={styles.project_title} >
-                            <p>this portfolio</p>
+                            <figcaption>this portfolio</figcaption>
                         </MDBMask>
                     </MDBView>
-                </div>
+                </figure>
             </div>
         </section>
 
@@ -121,7 +120,10 @@ let styles = {
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
+        @media only screen and (max-width: 450px) and (min-width: 280px) {
+            padding-bottom: 20px;
         }
+        
     `,
     project_title: css`
         color: white;
@@ -137,7 +139,7 @@ let styles = {
     project: css`
         margin-top: 10px;
     `,
-    line : css`
+    line: css`
         border-bottom: 1px solid grey;
         width: 100px;
     `

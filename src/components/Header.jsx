@@ -6,31 +6,17 @@ import { css } from 'emotion'
 const Header = (props) => {
     const [mobileMenu, setMobileMenu] = useState(styles.mobile_options)
 
-    // const introR = props.introRef.current.offsetTop
-
     const mobileMenuFunc = () => {
         setMobileMenu(mobileMenu === styles.mobile_options ? styles.mobile_options_clicked :  styles.mobile_options)
     }
 
-    const mobileHome = (ref) => {
+    const mobileHome = () => {
         window.scroll({top: 0, left:0, behavior: "smooth"});   
         setMobileMenu(styles.mobile_options)
     }
 
 
-    const scrollToRefMobile = (initialValue, ref) => {
-        // setMobileMenu(styles.mobile_options);
-        // let r = ref.current.offsetTop;
-        // let i = initialValue;
-        // if (r === 0) {
-        //     document.body.scrollTop = document.documentElement.scrollTop = 0;
-        // }
-        // if (i < r) {
-        //   setTimeout(() => {
-        //     window.scroll(0, r) 
-        //         scrollToRef(i + 100, ref);
-        //   },2);
-        // }
+    const scrollToRefMobile = (ref) => {
         setMobileMenu(styles.mobile_options);
         var scrollOptions = {
             left: 0,
@@ -52,14 +38,6 @@ const Header = (props) => {
                 scrollToRef(i + 100, ref);
           },2);
         }
-        // }
-        // var scrollOptions = {
-        //     left: 0,
-        //     top: ref.current.offsetTop,
-        //     behavior: 'smooth',
-        //   }
-        //   window.scroll(scrollOptions)
-
     }   
 
 
@@ -76,14 +54,14 @@ const Header = (props) => {
                 <li><a onClick={() => scrollToRefMobile(0, props.Pref)}>PROJECTS</a></li> 
                 <li><a onClick={() => scrollToRefMobile(0, props.Jref)}>JOURNEY</a></li>
                 <li><a onClick={() => scrollToRefMobile(0, props.Cref)}>CONTACT</a></li>
-                <li><a href="https://docs.google.com/document/d/19Qb-Vc6dS5hFHAGNGOo4bD6v9bwzFOS-pKzZ_abwaPc/edit?usp=sharing">RESUME</a></li>
+                <li><a target="_blank" rel="noreferrer noopener" href="https://docs.google.com/document/d/19Qb-Vc6dS5hFHAGNGOo4bD6v9bwzFOS-pKzZ_abwaPc/edit?usp=sharing">RESUME</a></li>
             </ul>
             <ul className={styles.web_options}>
                 <li><a onClick={() => scrollToRef(0, props.introRef)}>HOME</a></li>
                 <li><a onClick={() => scrollToRef(0, props.Pref)}>PROJECTS</a></li>
                 <li><a onClick={() => scrollToRef(0, props.Jref)}>JOURNEY</a></li>
                 <li><a onClick={() => scrollToRef(0, props.Cref)}>CONTACT</a></li>
-                <li><a href="https://docs.google.com/document/d/19Qb-Vc6dS5hFHAGNGOo4bD6v9bwzFOS-pKzZ_abwaPc/edit?usp=sharing">RESUME</a></li>
+                <li><a target="_blank" rel="noreferrer noopener" href="https://docs.google.com/document/d/19Qb-Vc6dS5hFHAGNGOo4bD6v9bwzFOS-pKzZ_abwaPc/edit?usp=sharing">RESUME</a></li>
             </ul>
         </nav>
     )
@@ -121,32 +99,18 @@ const styles = {
         display:none;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch !important;
-        @media(min-width: 900px){
+        @media (min-width: 900px) {
             // border: 3px solid blue;
             display: flex;
             justify-content: space-around;
             width: 40%;
             font-family: PT Sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-size: 15px;
-            a {
-                scroll-behavior: smooth;
-                -webkit-overflow-scrolling: touch !important;
-                color: #333333;
-                cursor: pointer;
-                &:focus {
-                    color: red;  
-                    -webkit-overflow-scrolling: touch !important;
-                };
-                &:hover {
-                    color: red;
-                    -webkit-overflow-scrolling: touch !important;
-                };
-                &:active {
-                    color: red;
-                    -webkit-overflow-scrolling: touch !important;
-                };
-            }
-        }
+        };
+        a {
+            color: #333333;
+            cursor: pointer;
+        };
     `,
     mobile_menu_container: css`
         cursor: pointer;
@@ -182,8 +146,6 @@ const styles = {
             z-index: 99;
             scroll-behavior: smooth;
             a {
-                scroll-behavior: smooth;
-                -webkit-overflow-scrolling: touch !important;
                 margin-top: 10px;
                 margin-left: 30%;
                 scroll-behavior: smooth;

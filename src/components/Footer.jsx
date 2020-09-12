@@ -8,7 +8,7 @@ import { css } from 'emotion'
 
 const Footer = () => {
     return (
-        <div className={styles.footer_wrapper}>
+        <footer className={styles.footer_wrapper}>
             <div className={styles.footer}>
                 <a className={styles.icons} href="https://github.com/Papatiara"><FontAwesomeIcon icon={faGithub} /></a>
                 <a className={styles.icons} href="https://www.linkedin.com/in/patriciashirazi/"><FontAwesomeIcon icon={faLinkedin} /> </a>
@@ -16,7 +16,7 @@ const Footer = () => {
             <div className={styles.name}>
                 <p> © 2020 Patricia Shirazi | shirazipatricia@gmail.com</p>
             </div>
-        </div>
+        </footer>
 
     )
 }
@@ -38,7 +38,6 @@ const styles = {
         flex-direction: column;
         @media (max-width: 1000px) {
             margin:0;
-
         },
     `,
     footer: css`   

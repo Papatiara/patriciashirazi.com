@@ -17,13 +17,11 @@ import { css } from 'emotion'
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 
-const Journey = (props) => {
+const Journey = () => {
     return (
         <section className={styles.container_slides_title}>
-            <div className={styles.title_line}>
             <h2 className={styles.title}> My Journey </h2>
-            <p className={styles.line}></p>
-            </div>
+            <hr className={styles.line} />
             <div className={styles.slides_container}>
                 <div>
                     <AutoplaySlider
@@ -34,62 +32,50 @@ const Journey = (props) => {
                         interval={6000}
                         className={styles.slide}
                     >
-            
-                  
-                        {/* <div className={styles.slides_container}> */}
-                            <div className={styles.pic_description}>
-                                <img src={grad} />
-                                <div className={styles.description}>
-                                    <strong>I got my degree in Mathematics in 2013.
-                                        I've always had a passion for solving problems and have always loved Math. 
-                                    </strong>
-                                </div>
-                            </div>
-                        {/* </div> */}
-                        {/* <div className={styles.slides_container}> */}
-                            <div className={styles.pic_description}>
-                                <img src={teacher} />
-                                <div className={styles.description}>
-                                    <strong>I've started teaching as an intern, when I was 21 years old.
-                                         Since them, I have developed a passion for helping others and also mentoring. 
-                                    </strong>
-                                </div>
-                            </div>
-                        {/* </div> */}
-                        {/* <div className={styles.slides_container}> */}
-                            <div className={styles.pic_description}>
-                                <img src={business} />
-                                <div className={styles.description}>
-                                    <strong>In 2015 I started my own business by teaching myself how to fix iPhones.
-                                        I grew the business from 1 employee to 8 within 24 months in two cities in Brazil, 
-                                        managing and being responsible for the company website.
-                                    </strong>
-                                {/* </div> */}
-                            </div>
-                        </div>
-                        {/* <div className={styles.slides_container}> */}
-                            <div className={styles.pic_description}>
-                                <img src={hrgrad} />
-                                <div className={styles.description}>
-                                    <strong>
-                                        In 2018, when I moved to the US, I've decided to jump into the software engineering field. 
-                                        I joined Hack Reactor and had an amazing experience. I learned full-stack concepts, improved my front-end skills, 
-                                        and could work with groups of engineers.
-                                    </strong>
-                                </div>
-                            </div>
-                        {/* </div> */}
-                        {/* <div className={styles.slides_container}> */}
-                            <div className={styles.pic_description}>
-                                <img src={google} />
-                                <div className={styles.description}>
-                                    <strong>In 2018 I joined Google. I worked for 1 and a half years as a Quality Engineer helping to improve Google Search results in Brazil.
-                                    I became an expert on testing as well as using tools such as Selenium and Python to automate processes.
-                                    </strong>
-                                </div>
-                            {/* </div> */}
-                        </div>
 
+                        <div className={styles.pic_description}>
+                            <img src={grad} />
+                            <div className={styles.description}>
+                                <strong>I got my degree in Mathematics in 2013.
+                                I've always had a passion for solving problems and have always loved Math.
+                                    </strong>
+                            </div>
+                        </div>
+                        <div className={styles.pic_description}>
+                            <img src={teacher} />
+                            <div className={styles.description}>
+                                <strong>I started teaching as an intern, when I was 21 years old.
+                                Since them, I have developed a passion for helping others and also mentoring.
+                                    </strong>
+                            </div>
+                        </div>
+                        <div className={styles.pic_description}>
+                            <img src={business} />
+                            <div className={styles.description}>
+                                <strong>In 2015 I started my own business by teaching myself how to fix iPhones.
+                                I grew the business from 1 employee to 8 within 24 months in two cities in Brazil,
+                                managing and being responsible for the company website.
+                                    </strong>
+                            </div>
+                        </div>
+                        <div className={styles.pic_description}>
+                            <img src={hrgrad} />
+                            <div className={styles.description}>
+                                <strong>
+                                    In 2018, when I moved to the US, I've decided to jump into the software engineering field.
+                                    I joined Hack Reactor and had an amazing experience. I learned full-stack concepts, improved my front-end skills,
+                                    and could work with groups of engineers.
+                                </strong>
+                            </div>
+                        </div>
+                        <div className={styles.pic_description}>
+                            <img src={google} />
+                            <div className={styles.description}>
+                                <strong>In 2018 I joined Google. I worked for 1 and a half years as a Quality Engineer helping to improve Google Search results in Brazil.
+                                I became an expert on testing as well as using tools such as Selenium and Python to automate processes.
+                                </strong>
+                            </div>
+                        </div>
                     </AutoplaySlider>
                 </div>
             </div>
@@ -105,7 +91,7 @@ const styles = {
         height: 100vh;
         min-height: 500px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         text-align: center;
@@ -121,7 +107,7 @@ const styles = {
         flex-direction: column;
         text-align: center;
     `,
-  
+
     slide: css`
         // border: 3px solid red;
         margin: auto;
@@ -152,9 +138,7 @@ const styles = {
         }
         @media (width: 280px){
             font-size: 12px;
-
-        
-                }
+        }
     `,
     slides_container: css`
         // border: 3px solid grey;
